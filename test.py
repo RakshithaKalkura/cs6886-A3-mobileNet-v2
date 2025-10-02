@@ -2,8 +2,8 @@ import argparse
 import torch
 import torch.nn as nn
 
-from dataset import get_dataloaders
-from model import MobileNetV2
+from data_loader import get_dataloaders
+from models import MobileNetV2
 from utils import load_checkpoint, accuracy
 
 

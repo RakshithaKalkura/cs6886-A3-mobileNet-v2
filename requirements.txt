@@ -1,0 +1,9 @@
+datasets
+torch>=2.0
+torchvision
+numpy
+tqdm
+wandb
+matplotlib
+scipy
+datasets
