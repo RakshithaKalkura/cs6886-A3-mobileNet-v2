@@ -3,7 +3,7 @@ from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 import torch
 import os
-from Preprocess.augment import Cutout, CIFAR10Policy
+from .augment import Cutout, CIFAR10Policy
 
 #better cifar10 dataloader with cutout and autoaugment 
 def GetCifar10(cfg):

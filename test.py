@@ -4,6 +4,7 @@ import torch.nn as nn
 
 from data_loader import get_dataloaders
 from models import MobileNetV2
+from dataset.getdataloader import GetCifar10
 from utils import load_checkpoint, accuracy
 
 
@@ -26,7 +27,8 @@ def main():
 
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-    _, test_loader = get_dataloaders(Cfg)
+    # _, test_loader = get_dataloaders(Cfg) # simpler data loader
+    _, test_loader = GetCifar10(Cfg) # better data loader with augmentations
 
     model = MobileNetV2(num_classes=10, width_mult=args.width_mult)
     model = model.to(device)
