@@ -1,0 +1,36 @@
+# Ignore model files
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.h5
+*.t7
+
+# Ignore datasets and large outputs
+data/
+datasets/
+outputs/
+results/
+*.npy
+*.npz
+*.pkl
+
+# Ignore logs and experiment folders
+logs/
+runs/
+checkpoints/
+wandb/
+lightning_logs/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore envs
+.venv/
+env/
+venv/
+
+
+## added a general .gitignore for Python projects 
