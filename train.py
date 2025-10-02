@@ -69,7 +69,7 @@ def validate(val_loader, model, criterion, device):
 
     return losses.avg, top1.avg
 
-
+#Plotting loss and accurcy curves
 def plot_curves(train_losses, val_losses, train_acc, val_acc, out_dir):
     os.makedirs(out_dir, exist_ok=True)
     epochs = list(range(1, len(train_losses) + 1))

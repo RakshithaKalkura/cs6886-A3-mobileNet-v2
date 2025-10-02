@@ -2,7 +2,7 @@ import torch
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
 
-
+#a simple data loader for CIFAR-10 
 def build_train_transforms():
     # CIFAR-10 mean/std
     mean = (0.4914, 0.4822, 0.4465)
