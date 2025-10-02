@@ -5,7 +5,7 @@ import json
 import argparse
 import numpy as np
 import torch
-from models import MobileNetV2
+from models.models import MobileNetV2
 from dataset.getdataloader import GetCifar10
 from deep_compress.utils import get_device, load_checkpoint
 from deep_compress.size_accounting import compute_model_size
@@ -53,7 +53,7 @@ if __name__=='__main__':
     parser.add_argument('--ckpt', default='/content/drive/MyDrive/checkpoints_v2/model_best.pth.tar', help='Initial full precision checkpoint to compress and evaluate')
     args=parser.parse_args()
     device = get_device(args.device)
-    train_loader, val_loader = GetCifar10(batch_size=128, data_dir='/content/drive/MyDrive/cifar10/', num_workers=4) #specify appropriate data_dir
+    train_loader, val_loader = GetCifar10(batch_size=128, data_dir='/content/drive/MyDrive/cifar10', num_workers=4) #specify appropriate data_dir
     # load sweep configs
     with open(args.cfg) as f:
         cfgs = json.load(f)

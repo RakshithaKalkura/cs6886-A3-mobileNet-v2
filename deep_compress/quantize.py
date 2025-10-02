@@ -2,6 +2,9 @@
 Quantization driver: builds k-means clusters per-layer and fine-tunes centroids.
 Saves meta as .npz containing codebooks and index arrays.
 """
+import sys, os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 import argparse
 import numpy as np
 import torch

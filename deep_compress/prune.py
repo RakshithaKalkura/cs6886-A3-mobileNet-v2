@@ -1,10 +1,13 @@
 """
 Magnitude pruning module. Outputs mask dict and pruned checkpoint.
 """
+import sys, os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 import argparse
 import torch
 from utils import load_checkpoint, save_checkpoint, get_device
-from models import MobileNetV2
+from models.models import MobileNetV2
 
 # basic global magnitude pruning - create masks and apply
 
