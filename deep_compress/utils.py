@@ -10,3 +10,8 @@ def save_checkpoint(state, path):
 
 def load_checkpoint(path, map_location=None):
     return torch.load(path, map_location=map_location)
+
+def get_device(pref='cuda'):
+    if pref=='cuda' and torch.cuda.is_available():
+        return torch.device('cuda')
+    return torch.device('cpu')
