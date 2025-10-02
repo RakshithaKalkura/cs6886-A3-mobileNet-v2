@@ -7,6 +7,7 @@ import torch.optim as optim
 import matplotlib.pyplot as plt
 
 from data_loader import get_dataloaders
+from dataset.getdataloader import GetCifar10
 from models import MobileNetV2
 from utils import AverageMeter, accuracy, save_checkpoint
 
@@ -102,9 +103,10 @@ def main():
         batch_size = args.batch_size
         num_workers = args.workers
 
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'  
 
-    train_loader, val_loader = get_dataloaders(Cfg)
+    # train_loader, val_loader = get_dataloaders(Cfg) # simpler data loader
+    train_loader, val_loader = GetCifar10(Cfg) # better data loader with augmentations
 
     model = MobileNetV2(num_classes=10, width_mult=args.width_mult, dropout=args.dropout)
     model = model.to(device)
