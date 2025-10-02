@@ -54,4 +54,9 @@ def load_checkpoint(path, model, optimizer=None):
         return checkpoint
     else:
         raise FileNotFoundError(f"No checkpoint found at '{path}'")
+    
+def get_device(pref='cuda'):
+    if pref=='cuda' and torch.cuda.is_available():
+        return torch.device('cuda')
+    return torch.device('cpu')
 
