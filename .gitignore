@@ -16,7 +16,7 @@ results/
 *.pkl
 
 # Ignore logs and experiment folders
-logs/
+logs
 runs/
 checkpoints/
 wandb/
