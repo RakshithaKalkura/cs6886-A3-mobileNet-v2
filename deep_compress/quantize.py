@@ -6,9 +6,9 @@ import argparse
 import numpy as np
 import torch
 from sklearn.cluster import KMeans
-from .utils import load_checkpoint, save_checkpoint, get_device
-from models import MobileNetV2
-from .centroid import CentroidRegistry, apply_centroids_to_model
+from utils import load_checkpoint, save_checkpoint, get_device
+from models.models import MobileNetV2
+from centroid import CentroidRegistry, apply_centroids_to_model
 
 
 def cluster_layer(weights_flat, n_clusters):
