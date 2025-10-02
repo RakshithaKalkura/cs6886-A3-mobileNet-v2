@@ -14,9 +14,9 @@ from utils import AverageMeter, accuracy, save_checkpoint
 
 def parse_args():
     parser = argparse.ArgumentParser(description='MobileNetV2 CIFAR-10 Training')
-    parser.add_argument('--data-dir', default='./data', type=str)
-    parser.add_argument('--out-dir', default='./outputs', type=str)
-    parser.add_argument('--epochs', default=200, type=int)
+    parser.add_argument('--data-dir', default='/content/drive/MyDrive/cifar10/', type=str)
+    parser.add_argument('--out-dir', default='/content/drive/MyDrive/checkpoints_v2/', type=str)
+    parser.add_argument('--epochs', default=300, type=int)
     parser.add_argument('--batch-size', default=128, type=int)
     parser.add_argument('--lr', default=0.1, type=float)
     parser.add_argument('--momentum', default=0.9, type=float)
