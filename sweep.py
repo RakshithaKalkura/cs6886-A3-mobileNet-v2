@@ -1,5 +1,5 @@
 """
-Sweep orchestration: run several compression configs, evaluate accuracy and size, log to wandb optionally.
+Sweep orchestration: to run several compression configs, evaluate accuracy and size, log to wandb.
 """
 import json
 import argparse
@@ -7,17 +7,15 @@ import numpy as np
 import torch
 from models import MobileNetV2
 from dataset.getdataloader import GetCifar10
-from .utils import get_device, load_checkpoint
-from .size_accounting import compute_model_size
-from .centroid import CentroidRegistry, apply_centroids_to_model
-from .evaluate import evaluate
+from deep_compress.utils import get_device, load_checkpoint
+from deep_compress.size_accounting import compute_model_size
+from deep_compress.centroid import CentroidRegistry, apply_centroids_to_model
+from evaluate import evaluate
 import deep_compress.quantize as qmod
 
-# Note: user must provide a training loader to fine-tune centroids. For brevity this script expects baseline ckpt path
-
-def run_one(cfg, device, train_loader=None, val_loader=None):
+def run_one(cfg, device, train_loader, val_loader, ckpt_path):
     model = MobileNetV2().to(device)
-    ck = load_checkpoint(cfg['baseline_ckpt'], map_location=device)
+    ck = load_checkpoint(ckpt_path, map_location=device)
     model.load_state_dict(ck['state_dict'])
     mask = ck.get('mask', {})
     # apply mask
@@ -52,6 +50,7 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('--cfg', required=True, help='JSON config with list of sweep configs')
     parser.add_argument('--device', default='cuda')
+    parser.add_argument('--ckpt', default='/content/drive/MyDrive/checkpoints_v2/model_best.pth.tar', help='Initial full precision checkpoint to compress and evaluate')
     args=parser.parse_args()
     device = get_device(args.device)
     train_loader, val_loader = GetCifar10(batch_size=128, data_dir='/content/drive/MyDrive/cifar10/', num_workers=4) #specify appropriate data_dir
@@ -63,5 +62,5 @@ if __name__=='__main__':
         res = run_one(c, device, train_loader, val_loader)
         print('cfg', c, '=>', res)
         results.append({'config':c,'result':res})
-    with open('sweep_out.json','w') as f:
+    with open('/content/drive/MyDrive/deepcompress_ckpt/sweep_out.json','w') as f:
         json.dump(results, f, indent=2)

@@ -32,7 +32,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--ckpt', required=True)
     parser.add_argument('--sparsity', type=float, default=0.8)
-    parser.add_argument('--out', default='pruned_ckpt.pth')
+    parser.add_argument('--out', default='/content/drive/MyDrive/deepcompress_ckpt/pruned_ckpt.pth')
     parser.add_argument('--device', default='cuda')
     args=parser.parse_args()
     device = get_device(args.device)

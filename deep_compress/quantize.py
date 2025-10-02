@@ -53,7 +53,7 @@ def save_meta_npz(meta, path):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--ckpt', required=True)
-    parser.add_argument('--out', default='quant_meta_initial.npz')
+    parser.add_argument('--out', default='/content/drive/MyDrive/deepcompress_ckpt/quant_meta_initial.npz')
     parser.add_argument('--device', default='cuda')
     parser.add_argument('--bits_conv', type=int, default=8)
     parser.add_argument('--bits_fc', type=int, default=5)
