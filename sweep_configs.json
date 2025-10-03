@@ -1,0 +1,25 @@
+[
+  {"name":"run_00","baseline_ckpt":"ckpt/model_best.pth.tar","sparsity":0.60,"bits_conv":6,"bits_fc":4,"act_bits":6,"centroid_finetune_epochs":5,"prune_finetune_epochs":1,"use_wandb":true,"wandb_project":"deep_compress"},
+  {"name":"run_01","baseline_ckpt":"ckpt/model_best.pth.tar","sparsity":0.60,"bits_conv":7,"bits_fc":5,"act_bits":7,"centroid_finetune_epochs":5,"prune_finetune_epochs":1,"use_wandb":true,"wandb_project":"deep_compress"},
+  {"name":"run_02","baseline_ckpt":"ckpt/model_best.pth.tar","sparsity":0.60,"bits_conv":8,"bits_fc":6,"act_bits":8,"centroid_finetune_epochs":5,"prune_finetune_epochs":1,"use_wandb":true,"wandb_project":"deep_compress"},
+
+  {"name":"run_03","baseline_ckpt":"ckpt/model_best.pth.tar","sparsity":0.70,"bits_conv":6,"bits_fc":4,"act_bits":6,"centroid_finetune_epochs":8,"prune_finetune_epochs":2,"use_wandb":true,"wandb_project":"deep_compress"},
+  {"name":"run_04","baseline_ckpt":"ckpt/model_best.pth.tar","sparsity":0.70,"bits_conv":7,"bits_fc":5,"act_bits":7,"centroid_finetune_epochs":8,"prune_finetune_epochs":2,"use_wandb":true,"wandb_project":"deep_compress"},
+  {"name":"run_05","baseline_ckpt":"ckpt/model_best.pth.tar","sparsity":0.70,"bits_conv":8,"bits_fc":6,"act_bits":8,"centroid_finetune_epochs":8,"prune_finetune_epochs":2,"use_wandb":true,"wandb_project":"deep_compress"},
+
+  {"name":"run_06","baseline_ckpt":"ckpt/model_best.pth.tar","sparsity":0.80,"bits_conv":6,"bits_fc":4,"act_bits":6,"centroid_finetune_epochs":10,"prune_finetune_epochs":3,"use_wandb":true,"wandb_project":"deep_compress"},
+  {"name":"run_07","baseline_ckpt":"ckpt/model_best.pth.tar","sparsity":0.80,"bits_conv":7,"bits_fc":5,"act_bits":7,"centroid_finetune_epochs":10,"prune_finetune_epochs":3,"use_wandb":true,"wandb_project":"deep_compress"},
+  {"name":"run_08","baseline_ckpt":"ckpt/model_best.pth.tar","sparsity":0.80,"bits_conv":8,"bits_fc":6,"act_bits":8,"centroid_finetune_epochs":10,"prune_finetune_epochs":3,"use_wandb":true,"wandb_project":"deep_compress"},
+
+  {"name":"run_09","baseline_ckpt":"ckpt/model_best.pth.tar","sparsity":0.85,"bits_conv":6,"bits_fc":4,"act_bits":6,"centroid_finetune_epochs":12,"prune_finetune_epochs":4,"use_wandb":true,"wandb_project":"deep_compress"},
+  {"name":"run_10","baseline_ckpt":"ckpt/model_best.pth.tar","sparsity":0.85,"bits_conv":7,"bits_fc":5,"act_bits":7,"centroid_finetune_epochs":12,"prune_finetune_epochs":4,"use_wandb":true,"wandb_project":"deep_compress"},
+  {"name":"run_11","baseline_ckpt":"ckpt/model_best.pth.tar","sparsity":0.85,"bits_conv":8,"bits_fc":6,"act_bits":8,"centroid_finetune_epochs":12,"prune_finetune_epochs":4,"use_wandb":true,"wandb_project":"deep_compress"},
+
+  {"name":"run_12","baseline_ckpt":"ckpt/model_best.pth.tar","sparsity":0.90,"bits_conv":6,"bits_fc":4,"act_bits":6,"centroid_finetune_epochs":15,"prune_finetune_epochs":5,"use_wandb":true,"wandb_project":"deep_compress"},
+  {"name":"run_13","baseline_ckpt":"ckpt/model_best.pth.tar","sparsity":0.90,"bits_conv":7,"bits_fc":5,"act_bits":7,"centroid_finetune_epochs":15,"prune_finetune_epochs":5,"use_wandb":true,"wandb_project":"deep_compress"},
+  {"name":"run_14","baseline_ckpt":"ckpt/model_best.pth.tar","sparsity":0.90,"bits_conv":8,"bits_fc":6,"act_bits":8,"centroid_finetune_epochs":15,"prune_finetune_epochs":5,"use_wandb":true,"wandb_project":"deep_compress"},
+
+  {"name":"run_15","baseline_ckpt":"ckpt/model_best.pth.tar","sparsity":0.95,"bits_conv":6,"bits_fc":4,"act_bits":6,"centroid_finetune_epochs":20,"prune_finetune_epochs":6,"use_wandb":true,"wandb_project":"deep_compress"},
+  {"name":"run_16","baseline_ckpt":"ckpt/model_best.pth.tar","sparsity":0.95,"bits_conv":7,"bits_fc":5,"act_bits":7,"centroid_finetune_epochs":20,"prune_finetune_epochs":6,"use_wandb":true,"wandb_project":"deep_compress"},
+  {"name":"run_17","baseline_ckpt":"ckpt/model_best.pth.tar","sparsity":0.95,"bits_conv":8,"bits_fc":6,"act_bits":8,"centroid_finetune_epochs":20,"prune_finetune_epochs":6,"use_wandb":true,"wandb_project":"deep_compress"}
+]

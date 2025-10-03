@@ -358,7 +358,7 @@ if __name__ == '__main__':
     parser.add_argument('--cfg', required=True, help='Path to sweep_configs.json (list of configs)')
     parser.add_argument('--device', default='cuda', help='Device to run on')
     parser.add_argument('--use_wandb', action='store_true', help='Log runs to WandB (must be logged in)')
-    parser.add_argument('--out', default='/content/drive/MyDrive/deepcompress_ckpt/sweep_out_v1', help='Output directory for results')
+    parser.add_argument('--out', default='deepcompress_ckpt/sweep_out', help='Output directory for results')
     parser.add_argument('--data-dir', default='/content/drive/MyDrive/cifar10/', type=str)
     parser.add_argument('--workers', default=4, type=int)
     parser.add_argument('--batch-size', default=128, type=int)

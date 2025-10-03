@@ -1,4 +1,4 @@
-# Generate an interactive Parallel Coordinates plot from sweep_out per-run JSONs.
+# To Generate an interactive Parallel Coordinates plot from sweep_out per-run JSONs.
 #
 # Usage:
 #   python plot_parallel_wandb.py --indir /content/drive/MyDrive/deepcompress_ckpt/sweep_out_v1 --outdir /content/drive/MyDrive/deepcompress_ckpt/sweep_out_v1 --out both --wandb --wandb_project deep_compress
