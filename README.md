@@ -88,5 +88,5 @@ Reported metrics include:
 - **Iterative pruning:** up to 70–85% sparsity without accuracy loss  
 - **Quantization:** Conv (7–8 bits), FC (5–6 bits), Activations (6–8 bits)  
 - **Final compression:**  
-  - ✅ 4–5× smaller with no accuracy drop  
-  - ⚡ Up to 7–8× smaller with <0.5% accuracy drop  
+  - 4–5× smaller with no accuracy drop  
+  - Up to 7–8× smaller with <0.5% accuracy drop  
