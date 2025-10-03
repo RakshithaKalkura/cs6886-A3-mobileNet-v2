@@ -30,7 +30,7 @@ from deep_compress.utils import get_device, load_checkpoint, save_checkpoint
 from deep_compress.quantize import build_meta  # builds codebook+indices meta
 from deep_compress.prune import make_global_mag_prune_mask, apply_mask
 from deep_compress.centroid import CentroidRegistry, apply_centroids_to_model
-from deep_compress.sifze_accounting import compute_model_size
+from deep_compress.size_accounting import compute_model_size
 from deep_compress.huffman import save_huffman_package, load_meta_npz
 from evaluate import evaluate
 
