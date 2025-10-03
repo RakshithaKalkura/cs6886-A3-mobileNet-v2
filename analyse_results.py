@@ -1,7 +1,7 @@
 import glob, json, os
 from operator import itemgetter
 
-IN_DIR = "/content/drive/MyDrive/deepcompress_ckpt1/sweep_out"
+IN_DIR = "/content/drive/MyDrive/deepcompress_v2/sweep_out"
 
 def load_results(indir=IN_DIR):
     files = sorted(glob.glob(os.path.join(indir, "*_result.json")))
