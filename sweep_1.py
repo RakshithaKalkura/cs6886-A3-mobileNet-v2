@@ -273,7 +273,7 @@ def run_one(cfg, train_loader, val_loader, device, out_dir='sweep_out'):
     print("Saved run result to", out_path)
 
     # WandB logging (optional)
-    if cfg.get('use_wandb', False) and _WANDB:
+    if cfg.get('use_wandb', True) and _WANDB:
         run = wandb.init(project=cfg.get('wandb_project', 'deep_compress'), config=cfg, reinit=True)
         print("WandB run created:", run.id)
         print("WandB run URL:", run.get_url()) 

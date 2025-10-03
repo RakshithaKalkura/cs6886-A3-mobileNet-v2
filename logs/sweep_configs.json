@@ -1,0 +1,35 @@
+[
+  {
+    "baseline_ckpt": "/content/drive/MyDrive/checkpoints_v2/model_best.pth.tar",
+    "sparsity": 0.6,
+    "bits_conv": 8,
+    "bits_fc": 5,
+    "centroid_finetune_epochs": 5,
+    "centroid_lr": 0.01,
+    "prune_finetune_epochs": 2,
+    "prune_lr": 0.01,
+    "act_bits": 8
+  },
+  {
+    "baseline_ckpt": "/content/drive/MyDrive/checkpoints_v2/model_best.pth.tar",
+    "sparsity": 0.8,
+    "bits_conv": 8,
+    "bits_fc": 5,
+    "centroid_finetune_epochs": 10,
+    "centroid_lr": 0.01,
+    "prune_finetune_epochs": 5,
+    "prune_lr": 0.01,
+    "act_bits": 8
+  },
+  {
+    "baseline_ckpt": "/content/drive/MyDrive/checkpoints_v2/model_best.pth.tar",
+    "sparsity": 0.9,
+    "bits_conv": 8,
+    "bits_fc": 4,
+    "centroid_finetune_epochs": 15,
+    "centroid_lr": 0.01,
+    "prune_finetune_epochs": 5,
+    "prune_lr": 0.01,
+    "act_bits": 6
+  }
+]

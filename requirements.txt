@@ -7,3 +7,6 @@ wandb
 matplotlib
 scipy
 datasets
+pandas 
+plotly 
+kaleido 
