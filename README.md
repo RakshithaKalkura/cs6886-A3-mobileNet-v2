@@ -1,6 +1,6 @@
-# MobileNet-v2 Quantisation (Assignment 3 for cs6886)
+# MobileNet-v2 Compression
 
-
+This work was done as an assignment for Systems for Deep Learning course (CS6886)
 
 
 ## Deep Compression Pipeline
