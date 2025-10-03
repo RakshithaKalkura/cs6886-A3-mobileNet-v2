@@ -14,7 +14,7 @@ Files:
  - utils.py         : helper utilities for saving/loading checkpoints and masks.
  - sweep.py         : orchestrates pruning+quantize sweeps and logs results (wandb optional).
 
-Usage (example):
+Usage (specify checkpoints appropriately):
  1) Train baseline: 
  ``` 
  python train.py --epochs 60 --out ckpt_baseline.pth
