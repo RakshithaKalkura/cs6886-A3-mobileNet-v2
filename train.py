@@ -6,9 +6,9 @@ import torch.nn as nn
 import torch.optim as optim
 import matplotlib.pyplot as plt
 
-from data_loader import get_dataloaders
+from dataset.data_loader import get_dataloaders
 from dataset.getdataloader import GetCifar10
-from models import MobileNetV2
+from models.models import MobileNetV2
 from utils import AverageMeter, accuracy, save_checkpoint
 
 
