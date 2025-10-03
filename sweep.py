@@ -50,10 +50,17 @@ if __name__=='__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('--cfg', required=True, help='JSON config with list of sweep configs')
     parser.add_argument('--device', default='cuda')
+    parser.add_argument('--data-dir', default='/content/drive/MyDrive/cifar10/', type=str)
+    parser.add_argument('--workers', default=4, type=int)
+    parser.add_argument('--batch-size', default=128, type=int)
     parser.add_argument('--ckpt', default='/content/drive/MyDrive/checkpoints_v2/model_best.pth.tar', help='Initial full precision checkpoint to compress and evaluate')
     args=parser.parse_args()
     device = get_device(args.device)
-    train_loader, val_loader = GetCifar10(batch_size=128, data_dir='/content/drive/MyDrive/cifar10', num_workers=4) #specify appropriate data_dir
+    class cfg_data:
+        data_dir = args.data_dir
+        batch_size = args.batch_size
+        num_workers = args.workers
+    train_loader, val_loader = GetCifar10(cfg_data) #specify appropriate data_dir
     # load sweep configs
     with open(args.cfg) as f:
         cfgs = json.load(f)

@@ -14,35 +14,77 @@ from models.models import MobileNetV2
 from centroid import CentroidRegistry, apply_centroids_to_model
 
 
+
 def cluster_layer(weights_flat, n_clusters):
-    if weights_flat.size==0:
-        return np.array([],dtype=np.float32), np.array([],dtype=np.int32)
+    if weights_flat.size == 0:
+        return np.array([], dtype=np.float32), np.array([], dtype=np.int32)
     k = min(n_clusters, weights_flat.size)
-    km = KMeans(n_clusters=k, random_state=0, n_init=10).fit(weights_flat.reshape(-1,1))
+    km = KMeans(n_clusters=k, random_state=0, n_init=10).fit(
+        weights_flat.reshape(-1, 1)
+    )
     return km.cluster_centers_.squeeze().astype(np.float32), km.labels_.astype(np.int32)
 
+
 def build_meta(model, mask, bits_map):
+    """
+    Build quantization metadata for each weight tensor.
+
+    Robustly handle mask entries that may be torch tensors on CPU/GPU or numpy arrays.
+    """
     meta = {}
-    for name,p in model.named_parameters():
-        if 'weight' not in name: continue
-        m = mask.get(name, np.ones_like(p.detach().cpu().numpy()))
-        flat = p.detach().cpu().numpy().flatten()
-        nz = np.where(m.flatten()!=0)[0]
-        if nz.size==0:
-            meta[name] = {'codebook': np.array([],dtype=np.float32), 'indices': -1*np.ones_like(flat,dtype=np.int32), 'shape': p.shape, 'bitwidth':1, 'nonzeros':0}
+    for name, p in model.named_parameters():
+        if "weight" not in name:
             continue
+
+        # obtain mask for this parameter; mask may be numpy array or a torch tensor
+        m_raw = mask.get(name, None)
+        if m_raw is None:
+            m = np.ones(p.detach().cpu().numpy().shape, dtype=np.float32)
+        else:
+            # if it's a torch tensor, move to CPU and convert
+            if isinstance(m_raw, torch.Tensor):
+                m = m_raw.detach().cpu().numpy()
+            else:
+                # assume numpy-like
+                m = np.array(m_raw)
+
+        flat = p.detach().cpu().numpy().flatten()
+        nz = np.where(m.flatten() != 0)[0]
+
+        if nz.size == 0:
+            meta[name] = {
+                "codebook": np.array([], dtype=np.float32),
+                "indices": -1 * np.ones_like(flat, dtype=np.int32),
+                "shape": p.shape,
+                "bitwidth": 1,
+                "nonzeros": 0,
+            }
+            continue
+
         vals = flat[nz]
-        # select bits
+
+        # select bitwidth by substring match
         bit = None
-        for k_sub,b in bits_map.items():
+        for k_sub, b in bits_map.items():
             if k_sub in name:
-                bit=b; break
-        if bit is None: bit=8
+                bit = b
+                break
+        if bit is None:
+            bit = 8
+
         k = max(2, 2**bit)
         cb, labels = cluster_layer(vals, k)
-        indices = -1*np.ones_like(flat,dtype=np.int32)
+
+        indices = -1 * np.ones_like(flat, dtype=np.int32)
         indices[nz] = labels
-        meta[name] = {'codebook':cb, 'indices':indices.reshape(p.shape), 'shape':p.shape, 'bitwidth':bit, 'nonzeros':int(nz.size)}
+
+        meta[name] = {
+            "codebook": cb,
+            "indices": indices.reshape(p.shape),
+            "shape": p.shape,
+            "bitwidth": bit,
+            "nonzeros": int(nz.size),
+        }
     return meta
 
 def save_meta_npz(meta, path):
@@ -64,6 +106,14 @@ def main():
     device = get_device(args.device)
     model = MobileNetV2().to(device)
     ck = load_checkpoint(args.ckpt, map_location=device)
+    # ck may be dict with 'state_dict' or direct state_dict
+    if isinstance(ck, dict) and "state_dict" in ck:
+        model.load_state_dict(ck["state_dict"])
+    else:
+        try:
+            model.load_state_dict(ck)
+        except Exception:
+            model.load_state_dict(ck.get("state", ck))
     model.load_state_dict(ck['state_dict'])
     mask = ck.get('mask', {})
     # bits map: simple substring mapping
@@ -74,3 +124,4 @@ def main():
 
 if __name__=='__main__':
     main()
+

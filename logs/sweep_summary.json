@@ -1,0 +1,4873 @@
+{
+  "runs": [
+    {
+      "name": "run_1759464195",
+      "config": {
+        "baseline_ckpt": "/content/drive/MyDrive/checkpoints_v2/model_best.pth.tar",
+        "sparsity": 0.6,
+        "bits_conv": 8,
+        "bits_fc": 5,
+        "centroid_finetune_epochs": 5,
+        "centroid_lr": 0.01,
+        "prune_finetune_epochs": 2,
+        "prune_lr": 0.01,
+        "act_bits": 8
+      },
+      "acc_baseline": 95.91,
+      "acc_compressed": 95.76,
+      "original_bytes": 8946728,
+      "compressed_bytes_raw": 3020224,
+      "compressed_bytes_huffman_est": 1585474,
+      "final_MB_raw": 3.020224,
+      "final_MB_huffman": 1.585474,
+      "ratio_model_raw": 0.33757860974425513,
+      "ratio_model_huffman": 0.17721271955512674,
+      "ratio_weights_raw": 0.33757860974425513,
+      "ratio_activations": 0.25003235703204896,
+      "act_fp32_bytes_per_sample": 26331216.0,
+      "act_quant_bytes_per_sample": 6583656.0,
+      "per_layer_act_quant": {
+        "features.0.0": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 32772
+        },
+        "features.0.1": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 32772
+        },
+        "features.0.2": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 32772
+        },
+        "features.0": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 32772
+        },
+        "features.1.conv.0.0": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 32772
+        },
+        "features.1.conv.0.1": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 32772
+        },
+        "features.1.conv.0.2": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 32772
+        },
+        "features.1.conv.0": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 32772
+        },
+        "features.1.conv.1": {
+          "fp32_bytes": 65536.0,
+          "quant_bytes": 16388
+        },
+        "features.1.conv.2": {
+          "fp32_bytes": 65536.0,
+          "quant_bytes": 16388
+        },
+        "features.1.conv": {
+          "fp32_bytes": 65536.0,
+          "quant_bytes": 16388
+        },
+        "features.1": {
+          "fp32_bytes": 65536.0,
+          "quant_bytes": 16388
+        },
+        "features.2.conv.0.0": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 98308
+        },
+        "features.2.conv.0.1": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 98308
+        },
+        "features.2.conv.0.2": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 98308
+        },
+        "features.2.conv.0": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 98308
+        },
+        "features.2.conv.1.0": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 98308
+        },
+        "features.2.conv.1.1": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 98308
+        },
+        "features.2.conv.1.2": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 98308
+        },
+        "features.2.conv.1": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 98308
+        },
+        "features.2.conv.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.2.conv.3": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.2.conv": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.3.conv.0.0": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.3.conv.0.1": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.3.conv.0.2": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.3.conv.0": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.3.conv.1.0": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.3.conv.1.1": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.3.conv.1.2": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.3.conv.1": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.3.conv.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.3.conv.3": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.3.conv": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.3": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.4.conv.0.0": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.4.conv.0.1": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.4.conv.0.2": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.4.conv.0": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.4.conv.1.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.4.conv.1.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.4.conv.1.2": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.4.conv.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.4.conv.2": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.4.conv.3": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.4.conv": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.4": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.5.conv.0.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.5.conv.0.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.5.conv.0.2": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.5.conv.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.5.conv.1.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.5.conv.1.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.5.conv.1.2": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.5.conv.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.5.conv.2": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.5.conv.3": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.5.conv": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.5": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.6.conv.0.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.6.conv.0.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.6.conv.0.2": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.6.conv.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.6.conv.1.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.6.conv.1.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.6.conv.1.2": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.6.conv.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.6.conv.2": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.6.conv.3": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.6.conv": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.6": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.7.conv.0.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.7.conv.0.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.7.conv.0.2": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.7.conv.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.7.conv.1.0": {
+          "fp32_bytes": 49152.0,
+          "quant_bytes": 12292
+        },
+        "features.7.conv.1.1": {
+          "fp32_bytes": 49152.0,
+          "quant_bytes": 12292
+        },
+        "features.7.conv.1.2": {
+          "fp32_bytes": 49152.0,
+          "quant_bytes": 12292
+        },
+        "features.7.conv.1": {
+          "fp32_bytes": 49152.0,
+          "quant_bytes": 12292
+        },
+        "features.7.conv.2": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.7.conv.3": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.7.conv": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.7": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.8.conv.0.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.8.conv.0.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.8.conv.0.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.8.conv.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.8.conv.1.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.8.conv.1.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.8.conv.1.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.8.conv.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.8.conv.2": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.8.conv.3": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.8.conv": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.8": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.9.conv.0.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.9.conv.0.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.9.conv.0.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.9.conv.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.9.conv.1.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.9.conv.1.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.9.conv.1.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.9.conv.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.9.conv.2": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.9.conv.3": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.9.conv": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.9": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.10.conv.0.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.10.conv.0.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.10.conv.0.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.10.conv.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.10.conv.1.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.10.conv.1.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.10.conv.1.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.10.conv.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.10.conv.2": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.10.conv.3": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.10.conv": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.10": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.11.conv.0.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.11.conv.0.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.11.conv.0.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.11.conv.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.11.conv.1.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.11.conv.1.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.11.conv.1.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.11.conv.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.11.conv.2": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.11.conv.3": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.11.conv": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.11": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.12.conv.0.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.12.conv.0.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.12.conv.0.2": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.12.conv.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.12.conv.1.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.12.conv.1.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.12.conv.1.2": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.12.conv.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.12.conv.2": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.12.conv.3": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.12.conv": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.12": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.13.conv.0.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.13.conv.0.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.13.conv.0.2": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.13.conv.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.13.conv.1.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.13.conv.1.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.13.conv.1.2": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.13.conv.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.13.conv.2": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.13.conv.3": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.13.conv": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.13": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.14.conv.0.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.14.conv.0.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.14.conv.0.2": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.14.conv.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.14.conv.1.0": {
+          "fp32_bytes": 36864.0,
+          "quant_bytes": 9220
+        },
+        "features.14.conv.1.1": {
+          "fp32_bytes": 36864.0,
+          "quant_bytes": 9220
+        },
+        "features.14.conv.1.2": {
+          "fp32_bytes": 36864.0,
+          "quant_bytes": 9220
+        },
+        "features.14.conv.1": {
+          "fp32_bytes": 36864.0,
+          "quant_bytes": 9220
+        },
+        "features.14.conv.2": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.14.conv.3": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.14.conv": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.14": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.15.conv.0.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.15.conv.0.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.15.conv.0.2": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.15.conv.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.15.conv.1.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.15.conv.1.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.15.conv.1.2": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.15.conv.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.15.conv.2": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.15.conv.3": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.15.conv": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.15": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.16.conv.0.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.16.conv.0.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.16.conv.0.2": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.16.conv.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.16.conv.1.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.16.conv.1.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.16.conv.1.2": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.16.conv.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.16.conv.2": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.16.conv.3": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.16.conv": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.16": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.17.conv.0.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.17.conv.0.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.17.conv.0.2": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.17.conv.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.17.conv.1.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.17.conv.1.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.17.conv.1.2": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.17.conv.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.17.conv.2": {
+          "fp32_bytes": 20480.0,
+          "quant_bytes": 5124
+        },
+        "features.17.conv.3": {
+          "fp32_bytes": 20480.0,
+          "quant_bytes": 5124
+        },
+        "features.17.conv": {
+          "fp32_bytes": 20480.0,
+          "quant_bytes": 5124
+        },
+        "features.17": {
+          "fp32_bytes": 20480.0,
+          "quant_bytes": 5124
+        },
+        "features.18.0": {
+          "fp32_bytes": 81920.0,
+          "quant_bytes": 20484
+        },
+        "features.18.1": {
+          "fp32_bytes": 81920.0,
+          "quant_bytes": 20484
+        },
+        "features.18.2": {
+          "fp32_bytes": 81920.0,
+          "quant_bytes": 20484
+        },
+        "features.18": {
+          "fp32_bytes": 81920.0,
+          "quant_bytes": 20484
+        },
+        "features": {
+          "fp32_bytes": 81920.0,
+          "quant_bytes": 20484
+        },
+        "avgpool": {
+          "fp32_bytes": 5120.0,
+          "quant_bytes": 1284
+        },
+        "dropout": {
+          "fp32_bytes": 5120.0,
+          "quant_bytes": 1284
+        },
+        "classifier": {
+          "fp32_bytes": 40.0,
+          "quant_bytes": 14
+        },
+        "": {
+          "fp32_bytes": 40.0,
+          "quant_bytes": 14
+        }
+      },
+      "size_breakdown": {
+        "features.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 749,
+          "meta_bytes": 749,
+          "mask_bytes": 108,
+          "layer_total": 2630
+        },
+        "features.0.1.weight": {
+          "codebook_bytes": 116,
+          "indices_bytes": 29,
+          "meta_bytes": 29,
+          "mask_bytes": 4,
+          "layer_total": 178
+        },
+        "features.1.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 263,
+          "meta_bytes": 263,
+          "mask_bytes": 36,
+          "layer_total": 1586
+        },
+        "features.1.conv.0.1.weight": {
+          "codebook_bytes": 128,
+          "indices_bytes": 32,
+          "meta_bytes": 32,
+          "mask_bytes": 4,
+          "layer_total": 196
+        },
+        "features.1.conv.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 440,
+          "meta_bytes": 440,
+          "mask_bytes": 64,
+          "layer_total": 1968
+        },
+        "features.1.conv.2.weight": {
+          "codebook_bytes": 64,
+          "indices_bytes": 16,
+          "meta_bytes": 16,
+          "mask_bytes": 2,
+          "layer_total": 98
+        },
+        "features.2.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1403,
+          "meta_bytes": 1403,
+          "mask_bytes": 192,
+          "layer_total": 4022
+        },
+        "features.2.conv.0.1.weight": {
+          "codebook_bytes": 380,
+          "indices_bytes": 95,
+          "meta_bytes": 95,
+          "mask_bytes": 12,
+          "layer_total": 582
+        },
+        "features.2.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 804,
+          "meta_bytes": 804,
+          "mask_bytes": 108,
+          "layer_total": 2740
+        },
+        "features.2.conv.1.1.weight": {
+          "codebook_bytes": 384,
+          "indices_bytes": 96,
+          "meta_bytes": 96,
+          "mask_bytes": 12,
+          "layer_total": 588
+        },
+        "features.2.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 2157,
+          "meta_bytes": 2157,
+          "mask_bytes": 288,
+          "layer_total": 5626
+        },
+        "features.2.conv.3.weight": {
+          "codebook_bytes": 96,
+          "indices_bytes": 24,
+          "meta_bytes": 24,
+          "mask_bytes": 3,
+          "layer_total": 147
+        },
+        "features.3.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3171,
+          "meta_bytes": 3171,
+          "mask_bytes": 432,
+          "layer_total": 7798
+        },
+        "features.3.conv.0.1.weight": {
+          "codebook_bytes": 568,
+          "indices_bytes": 142,
+          "meta_bytes": 142,
+          "mask_bytes": 18,
+          "layer_total": 870
+        },
+        "features.3.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1217,
+          "meta_bytes": 1217,
+          "mask_bytes": 162,
+          "layer_total": 3620
+        },
+        "features.3.conv.1.1.weight": {
+          "codebook_bytes": 576,
+          "indices_bytes": 144,
+          "meta_bytes": 144,
+          "mask_bytes": 18,
+          "layer_total": 882
+        },
+        "features.3.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3150,
+          "meta_bytes": 3150,
+          "mask_bytes": 432,
+          "layer_total": 7756
+        },
+        "features.3.conv.3.weight": {
+          "codebook_bytes": 96,
+          "indices_bytes": 24,
+          "meta_bytes": 24,
+          "mask_bytes": 3,
+          "layer_total": 147
+        },
+        "features.4.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3198,
+          "meta_bytes": 3198,
+          "mask_bytes": 432,
+          "layer_total": 7852
+        },
+        "features.4.conv.0.1.weight": {
+          "codebook_bytes": 572,
+          "indices_bytes": 143,
+          "meta_bytes": 143,
+          "mask_bytes": 18,
+          "layer_total": 876
+        },
+        "features.4.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1268,
+          "meta_bytes": 1268,
+          "mask_bytes": 162,
+          "layer_total": 3722
+        },
+        "features.4.conv.1.1.weight": {
+          "codebook_bytes": 576,
+          "indices_bytes": 144,
+          "meta_bytes": 144,
+          "mask_bytes": 18,
+          "layer_total": 882
+        },
+        "features.4.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 4271,
+          "meta_bytes": 4271,
+          "mask_bytes": 576,
+          "layer_total": 10142
+        },
+        "features.4.conv.3.weight": {
+          "codebook_bytes": 128,
+          "indices_bytes": 32,
+          "meta_bytes": 32,
+          "mask_bytes": 4,
+          "layer_total": 196
+        },
+        "features.5.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 5431,
+          "meta_bytes": 5431,
+          "mask_bytes": 768,
+          "layer_total": 12654
+        },
+        "features.5.conv.0.1.weight": {
+          "codebook_bytes": 764,
+          "indices_bytes": 191,
+          "meta_bytes": 191,
+          "mask_bytes": 24,
+          "layer_total": 1170
+        },
+        "features.5.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1605,
+          "meta_bytes": 1605,
+          "mask_bytes": 216,
+          "layer_total": 4450
+        },
+        "features.5.conv.1.1.weight": {
+          "codebook_bytes": 768,
+          "indices_bytes": 192,
+          "meta_bytes": 192,
+          "mask_bytes": 24,
+          "layer_total": 1176
+        },
+        "features.5.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 5448,
+          "meta_bytes": 5448,
+          "mask_bytes": 768,
+          "layer_total": 12688
+        },
+        "features.5.conv.3.weight": {
+          "codebook_bytes": 128,
+          "indices_bytes": 32,
+          "meta_bytes": 32,
+          "mask_bytes": 4,
+          "layer_total": 196
+        },
+        "features.6.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 5466,
+          "meta_bytes": 5466,
+          "mask_bytes": 768,
+          "layer_total": 12724
+        },
+        "features.6.conv.0.1.weight": {
+          "codebook_bytes": 740,
+          "indices_bytes": 185,
+          "meta_bytes": 185,
+          "mask_bytes": 24,
+          "layer_total": 1134
+        },
+        "features.6.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1601,
+          "meta_bytes": 1601,
+          "mask_bytes": 216,
+          "layer_total": 4442
+        },
+        "features.6.conv.1.1.weight": {
+          "codebook_bytes": 764,
+          "indices_bytes": 191,
+          "meta_bytes": 191,
+          "mask_bytes": 24,
+          "layer_total": 1170
+        },
+        "features.6.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 5361,
+          "meta_bytes": 5361,
+          "mask_bytes": 768,
+          "layer_total": 12514
+        },
+        "features.6.conv.3.weight": {
+          "codebook_bytes": 128,
+          "indices_bytes": 32,
+          "meta_bytes": 32,
+          "mask_bytes": 4,
+          "layer_total": 196
+        },
+        "features.7.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 5664,
+          "meta_bytes": 5664,
+          "mask_bytes": 768,
+          "layer_total": 13120
+        },
+        "features.7.conv.0.1.weight": {
+          "codebook_bytes": 748,
+          "indices_bytes": 187,
+          "meta_bytes": 187,
+          "mask_bytes": 24,
+          "layer_total": 1146
+        },
+        "features.7.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1686,
+          "meta_bytes": 1686,
+          "mask_bytes": 216,
+          "layer_total": 4612
+        },
+        "features.7.conv.1.1.weight": {
+          "codebook_bytes": 768,
+          "indices_bytes": 192,
+          "meta_bytes": 192,
+          "mask_bytes": 24,
+          "layer_total": 1176
+        },
+        "features.7.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 11032,
+          "meta_bytes": 11032,
+          "mask_bytes": 1536,
+          "layer_total": 24624
+        },
+        "features.7.conv.3.weight": {
+          "codebook_bytes": 256,
+          "indices_bytes": 64,
+          "meta_bytes": 64,
+          "mask_bytes": 8,
+          "layer_total": 392
+        },
+        "features.8.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 20297,
+          "meta_bytes": 20297,
+          "mask_bytes": 3072,
+          "layer_total": 44690
+        },
+        "features.8.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 379,
+          "meta_bytes": 379,
+          "mask_bytes": 48,
+          "layer_total": 1830
+        },
+        "features.8.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3171,
+          "meta_bytes": 3171,
+          "mask_bytes": 432,
+          "layer_total": 7798
+        },
+        "features.8.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 384,
+          "meta_bytes": 384,
+          "mask_bytes": 48,
+          "layer_total": 1840
+        },
+        "features.8.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 20502,
+          "meta_bytes": 20502,
+          "mask_bytes": 3072,
+          "layer_total": 45100
+        },
+        "features.8.conv.3.weight": {
+          "codebook_bytes": 256,
+          "indices_bytes": 64,
+          "meta_bytes": 64,
+          "mask_bytes": 8,
+          "layer_total": 392
+        },
+        "features.9.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 20226,
+          "meta_bytes": 20226,
+          "mask_bytes": 3072,
+          "layer_total": 44548
+        },
+        "features.9.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 368,
+          "meta_bytes": 368,
+          "mask_bytes": 48,
+          "layer_total": 1808
+        },
+        "features.9.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3121,
+          "meta_bytes": 3121,
+          "mask_bytes": 432,
+          "layer_total": 7698
+        },
+        "features.9.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 384,
+          "meta_bytes": 384,
+          "mask_bytes": 48,
+          "layer_total": 1840
+        },
+        "features.9.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 19987,
+          "meta_bytes": 19987,
+          "mask_bytes": 3072,
+          "layer_total": 44070
+        },
+        "features.9.conv.3.weight": {
+          "codebook_bytes": 256,
+          "indices_bytes": 64,
+          "meta_bytes": 64,
+          "mask_bytes": 8,
+          "layer_total": 392
+        },
+        "features.10.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 20316,
+          "meta_bytes": 20316,
+          "mask_bytes": 3072,
+          "layer_total": 44728
+        },
+        "features.10.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 364,
+          "meta_bytes": 364,
+          "mask_bytes": 48,
+          "layer_total": 1800
+        },
+        "features.10.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3143,
+          "meta_bytes": 3143,
+          "mask_bytes": 432,
+          "layer_total": 7742
+        },
+        "features.10.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 384,
+          "meta_bytes": 384,
+          "mask_bytes": 48,
+          "layer_total": 1840
+        },
+        "features.10.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 19640,
+          "meta_bytes": 19640,
+          "mask_bytes": 3072,
+          "layer_total": 43376
+        },
+        "features.10.conv.3.weight": {
+          "codebook_bytes": 256,
+          "indices_bytes": 64,
+          "meta_bytes": 64,
+          "mask_bytes": 8,
+          "layer_total": 392
+        },
+        "features.11.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 21960,
+          "meta_bytes": 21960,
+          "mask_bytes": 3072,
+          "layer_total": 48016
+        },
+        "features.11.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 378,
+          "meta_bytes": 378,
+          "mask_bytes": 48,
+          "layer_total": 1828
+        },
+        "features.11.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3212,
+          "meta_bytes": 3212,
+          "mask_bytes": 432,
+          "layer_total": 7880
+        },
+        "features.11.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 384,
+          "meta_bytes": 384,
+          "mask_bytes": 48,
+          "layer_total": 1840
+        },
+        "features.11.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 31855,
+          "meta_bytes": 31855,
+          "mask_bytes": 4608,
+          "layer_total": 69342
+        },
+        "features.11.conv.3.weight": {
+          "codebook_bytes": 384,
+          "indices_bytes": 96,
+          "meta_bytes": 96,
+          "mask_bytes": 12,
+          "layer_total": 588
+        },
+        "features.12.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 43528,
+          "meta_bytes": 43528,
+          "mask_bytes": 6912,
+          "layer_total": 94992
+        },
+        "features.12.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 541,
+          "meta_bytes": 541,
+          "mask_bytes": 72,
+          "layer_total": 2178
+        },
+        "features.12.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 4645,
+          "meta_bytes": 4645,
+          "mask_bytes": 648,
+          "layer_total": 10962
+        },
+        "features.12.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 576,
+          "meta_bytes": 576,
+          "mask_bytes": 72,
+          "layer_total": 2248
+        },
+        "features.12.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 41955,
+          "meta_bytes": 41955,
+          "mask_bytes": 6912,
+          "layer_total": 91846
+        },
+        "features.12.conv.3.weight": {
+          "codebook_bytes": 384,
+          "indices_bytes": 96,
+          "meta_bytes": 96,
+          "mask_bytes": 12,
+          "layer_total": 588
+        },
+        "features.13.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 42637,
+          "meta_bytes": 42637,
+          "mask_bytes": 6912,
+          "layer_total": 93210
+        },
+        "features.13.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 535,
+          "meta_bytes": 535,
+          "mask_bytes": 72,
+          "layer_total": 2166
+        },
+        "features.13.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 4575,
+          "meta_bytes": 4575,
+          "mask_bytes": 648,
+          "layer_total": 10822
+        },
+        "features.13.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 576,
+          "meta_bytes": 576,
+          "mask_bytes": 72,
+          "layer_total": 2248
+        },
+        "features.13.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 40113,
+          "meta_bytes": 40113,
+          "mask_bytes": 6912,
+          "layer_total": 88162
+        },
+        "features.13.conv.3.weight": {
+          "codebook_bytes": 384,
+          "indices_bytes": 96,
+          "meta_bytes": 96,
+          "mask_bytes": 12,
+          "layer_total": 588
+        },
+        "features.14.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 45383,
+          "meta_bytes": 45383,
+          "mask_bytes": 6912,
+          "layer_total": 98702
+        },
+        "features.14.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 520,
+          "meta_bytes": 520,
+          "mask_bytes": 72,
+          "layer_total": 2136
+        },
+        "features.14.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 4885,
+          "meta_bytes": 4885,
+          "mask_bytes": 648,
+          "layer_total": 11442
+        },
+        "features.14.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 576,
+          "meta_bytes": 576,
+          "mask_bytes": 72,
+          "layer_total": 2248
+        },
+        "features.14.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 69193,
+          "meta_bytes": 69193,
+          "mask_bytes": 11520,
+          "layer_total": 150930
+        },
+        "features.14.conv.3.weight": {
+          "codebook_bytes": 640,
+          "indices_bytes": 160,
+          "meta_bytes": 160,
+          "mask_bytes": 20,
+          "layer_total": 980
+        },
+        "features.15.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 102741,
+          "meta_bytes": 102741,
+          "mask_bytes": 19200,
+          "layer_total": 225706
+        },
+        "features.15.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 942,
+          "meta_bytes": 942,
+          "mask_bytes": 120,
+          "layer_total": 3028
+        },
+        "features.15.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 7752,
+          "meta_bytes": 7752,
+          "mask_bytes": 1080,
+          "layer_total": 17608
+        },
+        "features.15.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 960,
+          "meta_bytes": 960,
+          "mask_bytes": 120,
+          "layer_total": 3064
+        },
+        "features.15.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 98043,
+          "meta_bytes": 98043,
+          "mask_bytes": 19200,
+          "layer_total": 216310
+        },
+        "features.15.conv.3.weight": {
+          "codebook_bytes": 636,
+          "indices_bytes": 159,
+          "meta_bytes": 159,
+          "mask_bytes": 20,
+          "layer_total": 974
+        },
+        "features.16.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 102884,
+          "meta_bytes": 102884,
+          "mask_bytes": 19200,
+          "layer_total": 225992
+        },
+        "features.16.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 926,
+          "meta_bytes": 926,
+          "mask_bytes": 120,
+          "layer_total": 2996
+        },
+        "features.16.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 7622,
+          "meta_bytes": 7622,
+          "mask_bytes": 1080,
+          "layer_total": 17348
+        },
+        "features.16.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 960,
+          "meta_bytes": 960,
+          "mask_bytes": 120,
+          "layer_total": 3064
+        },
+        "features.16.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 90996,
+          "meta_bytes": 90996,
+          "mask_bytes": 19200,
+          "layer_total": 202216
+        },
+        "features.16.conv.3.weight": {
+          "codebook_bytes": 640,
+          "indices_bytes": 160,
+          "meta_bytes": 160,
+          "mask_bytes": 20,
+          "layer_total": 980
+        },
+        "features.17.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 107672,
+          "meta_bytes": 107672,
+          "mask_bytes": 19200,
+          "layer_total": 235568
+        },
+        "features.17.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 925,
+          "meta_bytes": 925,
+          "mask_bytes": 120,
+          "layer_total": 2994
+        },
+        "features.17.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 7610,
+          "meta_bytes": 7610,
+          "mask_bytes": 1080,
+          "layer_total": 17324
+        },
+        "features.17.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 960,
+          "meta_bytes": 960,
+          "mask_bytes": 120,
+          "layer_total": 3064
+        },
+        "features.17.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 131551,
+          "meta_bytes": 131551,
+          "mask_bytes": 38400,
+          "layer_total": 302526
+        },
+        "features.17.conv.3.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 320,
+          "meta_bytes": 320,
+          "mask_bytes": 40,
+          "layer_total": 1704
+        },
+        "features.18.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 96057,
+          "meta_bytes": 96057,
+          "mask_bytes": 51200,
+          "layer_total": 244338
+        },
+        "features.18.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1280,
+          "meta_bytes": 1280,
+          "mask_bytes": 160,
+          "layer_total": 3744
+        },
+        "classifier.weight": {
+          "codebook_bytes": 128,
+          "indices_bytes": 7717,
+          "meta_bytes": 7717,
+          "mask_bytes": 1600,
+          "layer_total": 17162
+        }
+      },
+      "empirical_huffman_bits": 11975882,
+      "huffman_meta_path": "/content/drive/MyDrive/deepcompress_ckpt/sweep_out_v1/run_1759464195_huff_meta.npz",
+      "huffman_codes_path": "/content/drive/MyDrive/deepcompress_ckpt/sweep_out_v1/run_1759464195_huff_codes.json",
+      "elapsed_sec": 428.0998990535736
+    },
+    {
+      "name": "run_1759464623",
+      "config": {
+        "baseline_ckpt": "/content/drive/MyDrive/checkpoints_v2/model_best.pth.tar",
+        "sparsity": 0.8,
+        "bits_conv": 8,
+        "bits_fc": 5,
+        "centroid_finetune_epochs": 10,
+        "centroid_lr": 0.01,
+        "prune_finetune_epochs": 5,
+        "prune_lr": 0.01,
+        "act_bits": 8
+      },
+      "acc_baseline": 95.91,
+      "acc_compressed": 95.56,
+      "original_bytes": 8946728,
+      "compressed_bytes_raw": 3907936,
+      "compressed_bytes_huffman_est": 1950626,
+      "final_MB_raw": 3.907936,
+      "final_MB_huffman": 1.950626,
+      "ratio_model_raw": 0.4368005822910901,
+      "ratio_model_huffman": 0.2180267467614976,
+      "ratio_weights_raw": 0.4368005822910901,
+      "ratio_activations": 0.25003235703204896,
+      "act_fp32_bytes_per_sample": 26331216.0,
+      "act_quant_bytes_per_sample": 6583656.0,
+      "per_layer_act_quant": {
+        "features.0.0": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 32772
+        },
+        "features.0.1": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 32772
+        },
+        "features.0.2": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 32772
+        },
+        "features.0": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 32772
+        },
+        "features.1.conv.0.0": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 32772
+        },
+        "features.1.conv.0.1": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 32772
+        },
+        "features.1.conv.0.2": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 32772
+        },
+        "features.1.conv.0": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 32772
+        },
+        "features.1.conv.1": {
+          "fp32_bytes": 65536.0,
+          "quant_bytes": 16388
+        },
+        "features.1.conv.2": {
+          "fp32_bytes": 65536.0,
+          "quant_bytes": 16388
+        },
+        "features.1.conv": {
+          "fp32_bytes": 65536.0,
+          "quant_bytes": 16388
+        },
+        "features.1": {
+          "fp32_bytes": 65536.0,
+          "quant_bytes": 16388
+        },
+        "features.2.conv.0.0": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 98308
+        },
+        "features.2.conv.0.1": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 98308
+        },
+        "features.2.conv.0.2": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 98308
+        },
+        "features.2.conv.0": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 98308
+        },
+        "features.2.conv.1.0": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 98308
+        },
+        "features.2.conv.1.1": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 98308
+        },
+        "features.2.conv.1.2": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 98308
+        },
+        "features.2.conv.1": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 98308
+        },
+        "features.2.conv.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.2.conv.3": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.2.conv": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.3.conv.0.0": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.3.conv.0.1": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.3.conv.0.2": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.3.conv.0": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.3.conv.1.0": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.3.conv.1.1": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.3.conv.1.2": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.3.conv.1": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.3.conv.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.3.conv.3": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.3.conv": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.3": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.4.conv.0.0": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.4.conv.0.1": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.4.conv.0.2": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.4.conv.0": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 147460
+        },
+        "features.4.conv.1.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.4.conv.1.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.4.conv.1.2": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.4.conv.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.4.conv.2": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.4.conv.3": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.4.conv": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.4": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.5.conv.0.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.5.conv.0.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.5.conv.0.2": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.5.conv.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.5.conv.1.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.5.conv.1.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.5.conv.1.2": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.5.conv.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.5.conv.2": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.5.conv.3": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.5.conv": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.5": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.6.conv.0.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.6.conv.0.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.6.conv.0.2": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.6.conv.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.6.conv.1.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.6.conv.1.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.6.conv.1.2": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.6.conv.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.6.conv.2": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.6.conv.3": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.6.conv": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.6": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 8196
+        },
+        "features.7.conv.0.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.7.conv.0.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.7.conv.0.2": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.7.conv.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 49156
+        },
+        "features.7.conv.1.0": {
+          "fp32_bytes": 49152.0,
+          "quant_bytes": 12292
+        },
+        "features.7.conv.1.1": {
+          "fp32_bytes": 49152.0,
+          "quant_bytes": 12292
+        },
+        "features.7.conv.1.2": {
+          "fp32_bytes": 49152.0,
+          "quant_bytes": 12292
+        },
+        "features.7.conv.1": {
+          "fp32_bytes": 49152.0,
+          "quant_bytes": 12292
+        },
+        "features.7.conv.2": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.7.conv.3": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.7.conv": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.7": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.8.conv.0.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.8.conv.0.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.8.conv.0.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.8.conv.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.8.conv.1.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.8.conv.1.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.8.conv.1.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.8.conv.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.8.conv.2": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.8.conv.3": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.8.conv": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.8": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.9.conv.0.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.9.conv.0.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.9.conv.0.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.9.conv.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.9.conv.1.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.9.conv.1.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.9.conv.1.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.9.conv.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.9.conv.2": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.9.conv.3": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.9.conv": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.9": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.10.conv.0.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.10.conv.0.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.10.conv.0.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.10.conv.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.10.conv.1.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.10.conv.1.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.10.conv.1.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.10.conv.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.10.conv.2": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.10.conv.3": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.10.conv": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.10": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 4100
+        },
+        "features.11.conv.0.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.11.conv.0.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.11.conv.0.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.11.conv.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.11.conv.1.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.11.conv.1.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.11.conv.1.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.11.conv.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 24580
+        },
+        "features.11.conv.2": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.11.conv.3": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.11.conv": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.11": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.12.conv.0.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.12.conv.0.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.12.conv.0.2": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.12.conv.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.12.conv.1.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.12.conv.1.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.12.conv.1.2": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.12.conv.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.12.conv.2": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.12.conv.3": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.12.conv": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.12": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.13.conv.0.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.13.conv.0.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.13.conv.0.2": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.13.conv.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.13.conv.1.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.13.conv.1.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.13.conv.1.2": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.13.conv.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.13.conv.2": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.13.conv.3": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.13.conv": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.13": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 6148
+        },
+        "features.14.conv.0.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.14.conv.0.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.14.conv.0.2": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.14.conv.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 36868
+        },
+        "features.14.conv.1.0": {
+          "fp32_bytes": 36864.0,
+          "quant_bytes": 9220
+        },
+        "features.14.conv.1.1": {
+          "fp32_bytes": 36864.0,
+          "quant_bytes": 9220
+        },
+        "features.14.conv.1.2": {
+          "fp32_bytes": 36864.0,
+          "quant_bytes": 9220
+        },
+        "features.14.conv.1": {
+          "fp32_bytes": 36864.0,
+          "quant_bytes": 9220
+        },
+        "features.14.conv.2": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.14.conv.3": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.14.conv": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.14": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.15.conv.0.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.15.conv.0.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.15.conv.0.2": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.15.conv.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.15.conv.1.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.15.conv.1.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.15.conv.1.2": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.15.conv.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.15.conv.2": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.15.conv.3": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.15.conv": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.15": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.16.conv.0.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.16.conv.0.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.16.conv.0.2": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.16.conv.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.16.conv.1.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.16.conv.1.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.16.conv.1.2": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.16.conv.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.16.conv.2": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.16.conv.3": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.16.conv": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.16": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 2564
+        },
+        "features.17.conv.0.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.17.conv.0.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.17.conv.0.2": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.17.conv.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.17.conv.1.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.17.conv.1.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.17.conv.1.2": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.17.conv.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 15364
+        },
+        "features.17.conv.2": {
+          "fp32_bytes": 20480.0,
+          "quant_bytes": 5124
+        },
+        "features.17.conv.3": {
+          "fp32_bytes": 20480.0,
+          "quant_bytes": 5124
+        },
+        "features.17.conv": {
+          "fp32_bytes": 20480.0,
+          "quant_bytes": 5124
+        },
+        "features.17": {
+          "fp32_bytes": 20480.0,
+          "quant_bytes": 5124
+        },
+        "features.18.0": {
+          "fp32_bytes": 81920.0,
+          "quant_bytes": 20484
+        },
+        "features.18.1": {
+          "fp32_bytes": 81920.0,
+          "quant_bytes": 20484
+        },
+        "features.18.2": {
+          "fp32_bytes": 81920.0,
+          "quant_bytes": 20484
+        },
+        "features.18": {
+          "fp32_bytes": 81920.0,
+          "quant_bytes": 20484
+        },
+        "features": {
+          "fp32_bytes": 81920.0,
+          "quant_bytes": 20484
+        },
+        "avgpool": {
+          "fp32_bytes": 5120.0,
+          "quant_bytes": 1284
+        },
+        "dropout": {
+          "fp32_bytes": 5120.0,
+          "quant_bytes": 1284
+        },
+        "classifier": {
+          "fp32_bytes": 40.0,
+          "quant_bytes": 14
+        },
+        "": {
+          "fp32_bytes": 40.0,
+          "quant_bytes": 14
+        }
+      },
+      "size_breakdown": {
+        "features.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 795,
+          "meta_bytes": 795,
+          "mask_bytes": 108,
+          "layer_total": 2722
+        },
+        "features.0.1.weight": {
+          "codebook_bytes": 124,
+          "indices_bytes": 31,
+          "meta_bytes": 31,
+          "mask_bytes": 4,
+          "layer_total": 190
+        },
+        "features.1.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 282,
+          "meta_bytes": 282,
+          "mask_bytes": 36,
+          "layer_total": 1624
+        },
+        "features.1.conv.0.1.weight": {
+          "codebook_bytes": 128,
+          "indices_bytes": 32,
+          "meta_bytes": 32,
+          "mask_bytes": 4,
+          "layer_total": 196
+        },
+        "features.1.conv.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 475,
+          "meta_bytes": 475,
+          "mask_bytes": 64,
+          "layer_total": 2038
+        },
+        "features.1.conv.2.weight": {
+          "codebook_bytes": 64,
+          "indices_bytes": 16,
+          "meta_bytes": 16,
+          "mask_bytes": 2,
+          "layer_total": 98
+        },
+        "features.2.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1481,
+          "meta_bytes": 1481,
+          "mask_bytes": 192,
+          "layer_total": 4178
+        },
+        "features.2.conv.0.1.weight": {
+          "codebook_bytes": 384,
+          "indices_bytes": 96,
+          "meta_bytes": 96,
+          "mask_bytes": 12,
+          "layer_total": 588
+        },
+        "features.2.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 843,
+          "meta_bytes": 843,
+          "mask_bytes": 108,
+          "layer_total": 2818
+        },
+        "features.2.conv.1.1.weight": {
+          "codebook_bytes": 384,
+          "indices_bytes": 96,
+          "meta_bytes": 96,
+          "mask_bytes": 12,
+          "layer_total": 588
+        },
+        "features.2.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 2243,
+          "meta_bytes": 2243,
+          "mask_bytes": 288,
+          "layer_total": 5798
+        },
+        "features.2.conv.3.weight": {
+          "codebook_bytes": 96,
+          "indices_bytes": 24,
+          "meta_bytes": 24,
+          "mask_bytes": 3,
+          "layer_total": 147
+        },
+        "features.3.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3346,
+          "meta_bytes": 3346,
+          "mask_bytes": 432,
+          "layer_total": 8148
+        },
+        "features.3.conv.0.1.weight": {
+          "codebook_bytes": 576,
+          "indices_bytes": 144,
+          "meta_bytes": 144,
+          "mask_bytes": 18,
+          "layer_total": 882
+        },
+        "features.3.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1260,
+          "meta_bytes": 1260,
+          "mask_bytes": 162,
+          "layer_total": 3706
+        },
+        "features.3.conv.1.1.weight": {
+          "codebook_bytes": 576,
+          "indices_bytes": 144,
+          "meta_bytes": 144,
+          "mask_bytes": 18,
+          "layer_total": 882
+        },
+        "features.3.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3321,
+          "meta_bytes": 3321,
+          "mask_bytes": 432,
+          "layer_total": 8098
+        },
+        "features.3.conv.3.weight": {
+          "codebook_bytes": 96,
+          "indices_bytes": 24,
+          "meta_bytes": 24,
+          "mask_bytes": 3,
+          "layer_total": 147
+        },
+        "features.4.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3351,
+          "meta_bytes": 3351,
+          "mask_bytes": 432,
+          "layer_total": 8158
+        },
+        "features.4.conv.0.1.weight": {
+          "codebook_bytes": 576,
+          "indices_bytes": 144,
+          "meta_bytes": 144,
+          "mask_bytes": 18,
+          "layer_total": 882
+        },
+        "features.4.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1278,
+          "meta_bytes": 1278,
+          "mask_bytes": 162,
+          "layer_total": 3742
+        },
+        "features.4.conv.1.1.weight": {
+          "codebook_bytes": 576,
+          "indices_bytes": 144,
+          "meta_bytes": 144,
+          "mask_bytes": 18,
+          "layer_total": 882
+        },
+        "features.4.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 4453,
+          "meta_bytes": 4453,
+          "mask_bytes": 576,
+          "layer_total": 10506
+        },
+        "features.4.conv.3.weight": {
+          "codebook_bytes": 128,
+          "indices_bytes": 32,
+          "meta_bytes": 32,
+          "mask_bytes": 4,
+          "layer_total": 196
+        },
+        "features.5.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 5806,
+          "meta_bytes": 5806,
+          "mask_bytes": 768,
+          "layer_total": 13404
+        },
+        "features.5.conv.0.1.weight": {
+          "codebook_bytes": 768,
+          "indices_bytes": 192,
+          "meta_bytes": 192,
+          "mask_bytes": 24,
+          "layer_total": 1176
+        },
+        "features.5.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1681,
+          "meta_bytes": 1681,
+          "mask_bytes": 216,
+          "layer_total": 4602
+        },
+        "features.5.conv.1.1.weight": {
+          "codebook_bytes": 768,
+          "indices_bytes": 192,
+          "meta_bytes": 192,
+          "mask_bytes": 24,
+          "layer_total": 1176
+        },
+        "features.5.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 5819,
+          "meta_bytes": 5819,
+          "mask_bytes": 768,
+          "layer_total": 13430
+        },
+        "features.5.conv.3.weight": {
+          "codebook_bytes": 128,
+          "indices_bytes": 32,
+          "meta_bytes": 32,
+          "mask_bytes": 4,
+          "layer_total": 196
+        },
+        "features.6.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 5836,
+          "meta_bytes": 5836,
+          "mask_bytes": 768,
+          "layer_total": 13464
+        },
+        "features.6.conv.0.1.weight": {
+          "codebook_bytes": 760,
+          "indices_bytes": 190,
+          "meta_bytes": 190,
+          "mask_bytes": 24,
+          "layer_total": 1164
+        },
+        "features.6.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1666,
+          "meta_bytes": 1666,
+          "mask_bytes": 216,
+          "layer_total": 4572
+        },
+        "features.6.conv.1.1.weight": {
+          "codebook_bytes": 768,
+          "indices_bytes": 192,
+          "meta_bytes": 192,
+          "mask_bytes": 24,
+          "layer_total": 1176
+        },
+        "features.6.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 5792,
+          "meta_bytes": 5792,
+          "mask_bytes": 768,
+          "layer_total": 13376
+        },
+        "features.6.conv.3.weight": {
+          "codebook_bytes": 128,
+          "indices_bytes": 32,
+          "meta_bytes": 32,
+          "mask_bytes": 4,
+          "layer_total": 196
+        },
+        "features.7.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 5940,
+          "meta_bytes": 5940,
+          "mask_bytes": 768,
+          "layer_total": 13672
+        },
+        "features.7.conv.0.1.weight": {
+          "codebook_bytes": 752,
+          "indices_bytes": 188,
+          "meta_bytes": 188,
+          "mask_bytes": 24,
+          "layer_total": 1152
+        },
+        "features.7.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1712,
+          "meta_bytes": 1712,
+          "mask_bytes": 216,
+          "layer_total": 4664
+        },
+        "features.7.conv.1.1.weight": {
+          "codebook_bytes": 768,
+          "indices_bytes": 192,
+          "meta_bytes": 192,
+          "mask_bytes": 24,
+          "layer_total": 1176
+        },
+        "features.7.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 11710,
+          "meta_bytes": 11710,
+          "mask_bytes": 1536,
+          "layer_total": 25980
+        },
+        "features.7.conv.3.weight": {
+          "codebook_bytes": 256,
+          "indices_bytes": 64,
+          "meta_bytes": 64,
+          "mask_bytes": 8,
+          "layer_total": 392
+        },
+        "features.8.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 22656,
+          "meta_bytes": 22656,
+          "mask_bytes": 3072,
+          "layer_total": 49408
+        },
+        "features.8.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 382,
+          "meta_bytes": 382,
+          "mask_bytes": 48,
+          "layer_total": 1836
+        },
+        "features.8.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3340,
+          "meta_bytes": 3340,
+          "mask_bytes": 432,
+          "layer_total": 8136
+        },
+        "features.8.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 384,
+          "meta_bytes": 384,
+          "mask_bytes": 48,
+          "layer_total": 1840
+        },
+        "features.8.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 22689,
+          "meta_bytes": 22689,
+          "mask_bytes": 3072,
+          "layer_total": 49474
+        },
+        "features.8.conv.3.weight": {
+          "codebook_bytes": 256,
+          "indices_bytes": 64,
+          "meta_bytes": 64,
+          "mask_bytes": 8,
+          "layer_total": 392
+        },
+        "features.9.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 22562,
+          "meta_bytes": 22562,
+          "mask_bytes": 3072,
+          "layer_total": 49220
+        },
+        "features.9.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 380,
+          "meta_bytes": 380,
+          "mask_bytes": 48,
+          "layer_total": 1832
+        },
+        "features.9.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3298,
+          "meta_bytes": 3298,
+          "mask_bytes": 432,
+          "layer_total": 8052
+        },
+        "features.9.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 384,
+          "meta_bytes": 384,
+          "mask_bytes": 48,
+          "layer_total": 1840
+        },
+        "features.9.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 22506,
+          "meta_bytes": 22506,
+          "mask_bytes": 3072,
+          "layer_total": 49108
+        },
+        "features.9.conv.3.weight": {
+          "codebook_bytes": 256,
+          "indices_bytes": 64,
+          "meta_bytes": 64,
+          "mask_bytes": 8,
+          "layer_total": 392
+        },
+        "features.10.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 22624,
+          "meta_bytes": 22624,
+          "mask_bytes": 3072,
+          "layer_total": 49344
+        },
+        "features.10.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 379,
+          "meta_bytes": 379,
+          "mask_bytes": 48,
+          "layer_total": 1830
+        },
+        "features.10.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3308,
+          "meta_bytes": 3308,
+          "mask_bytes": 432,
+          "layer_total": 8072
+        },
+        "features.10.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 384,
+          "meta_bytes": 384,
+          "mask_bytes": 48,
+          "layer_total": 1840
+        },
+        "features.10.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 22321,
+          "meta_bytes": 22321,
+          "mask_bytes": 3072,
+          "layer_total": 48738
+        },
+        "features.10.conv.3.weight": {
+          "codebook_bytes": 256,
+          "indices_bytes": 64,
+          "meta_bytes": 64,
+          "mask_bytes": 8,
+          "layer_total": 392
+        },
+        "features.11.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 23394,
+          "meta_bytes": 23394,
+          "mask_bytes": 3072,
+          "layer_total": 50884
+        },
+        "features.11.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 382,
+          "meta_bytes": 382,
+          "mask_bytes": 48,
+          "layer_total": 1836
+        },
+        "features.11.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3347,
+          "meta_bytes": 3347,
+          "mask_bytes": 432,
+          "layer_total": 8150
+        },
+        "features.11.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 384,
+          "meta_bytes": 384,
+          "mask_bytes": 48,
+          "layer_total": 1840
+        },
+        "features.11.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 34600,
+          "meta_bytes": 34600,
+          "mask_bytes": 4608,
+          "layer_total": 74832
+        },
+        "features.11.conv.3.weight": {
+          "codebook_bytes": 384,
+          "indices_bytes": 96,
+          "meta_bytes": 96,
+          "mask_bytes": 12,
+          "layer_total": 588
+        },
+        "features.12.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 49863,
+          "meta_bytes": 49863,
+          "mask_bytes": 6912,
+          "layer_total": 107662
+        },
+        "features.12.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 562,
+          "meta_bytes": 562,
+          "mask_bytes": 72,
+          "layer_total": 2220
+        },
+        "features.12.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 4948,
+          "meta_bytes": 4948,
+          "mask_bytes": 648,
+          "layer_total": 11568
+        },
+        "features.12.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 576,
+          "meta_bytes": 576,
+          "mask_bytes": 72,
+          "layer_total": 2248
+        },
+        "features.12.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 49066,
+          "meta_bytes": 49066,
+          "mask_bytes": 6912,
+          "layer_total": 106068
+        },
+        "features.12.conv.3.weight": {
+          "codebook_bytes": 384,
+          "indices_bytes": 96,
+          "meta_bytes": 96,
+          "mask_bytes": 12,
+          "layer_total": 588
+        },
+        "features.13.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 49424,
+          "meta_bytes": 49424,
+          "mask_bytes": 6912,
+          "layer_total": 106784
+        },
+        "features.13.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 564,
+          "meta_bytes": 564,
+          "mask_bytes": 72,
+          "layer_total": 2224
+        },
+        "features.13.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 4937,
+          "meta_bytes": 4937,
+          "mask_bytes": 648,
+          "layer_total": 11546
+        },
+        "features.13.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 576,
+          "meta_bytes": 576,
+          "mask_bytes": 72,
+          "layer_total": 2248
+        },
+        "features.13.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 48276,
+          "meta_bytes": 48276,
+          "mask_bytes": 6912,
+          "layer_total": 104488
+        },
+        "features.13.conv.3.weight": {
+          "codebook_bytes": 384,
+          "indices_bytes": 96,
+          "meta_bytes": 96,
+          "mask_bytes": 12,
+          "layer_total": 588
+        },
+        "features.14.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 50703,
+          "meta_bytes": 50703,
+          "mask_bytes": 6912,
+          "layer_total": 109342
+        },
+        "features.14.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 556,
+          "meta_bytes": 556,
+          "mask_bytes": 72,
+          "layer_total": 2208
+        },
+        "features.14.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 5052,
+          "meta_bytes": 5052,
+          "mask_bytes": 648,
+          "layer_total": 11776
+        },
+        "features.14.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 576,
+          "meta_bytes": 576,
+          "mask_bytes": 72,
+          "layer_total": 2248
+        },
+        "features.14.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 81465,
+          "meta_bytes": 81465,
+          "mask_bytes": 11520,
+          "layer_total": 175474
+        },
+        "features.14.conv.3.weight": {
+          "codebook_bytes": 640,
+          "indices_bytes": 160,
+          "meta_bytes": 160,
+          "mask_bytes": 20,
+          "layer_total": 980
+        },
+        "features.15.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 130116,
+          "meta_bytes": 130116,
+          "mask_bytes": 19200,
+          "layer_total": 280456
+        },
+        "features.15.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 957,
+          "meta_bytes": 957,
+          "mask_bytes": 120,
+          "layer_total": 3058
+        },
+        "features.15.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 8231,
+          "meta_bytes": 8231,
+          "mask_bytes": 1080,
+          "layer_total": 18566
+        },
+        "features.15.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 960,
+          "meta_bytes": 960,
+          "mask_bytes": 120,
+          "layer_total": 3064
+        },
+        "features.15.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 127454,
+          "meta_bytes": 127454,
+          "mask_bytes": 19200,
+          "layer_total": 275132
+        },
+        "features.15.conv.3.weight": {
+          "codebook_bytes": 640,
+          "indices_bytes": 160,
+          "meta_bytes": 160,
+          "mask_bytes": 20,
+          "layer_total": 980
+        },
+        "features.16.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 129850,
+          "meta_bytes": 129850,
+          "mask_bytes": 19200,
+          "layer_total": 279924
+        },
+        "features.16.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 955,
+          "meta_bytes": 955,
+          "mask_bytes": 120,
+          "layer_total": 3054
+        },
+        "features.16.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 8164,
+          "meta_bytes": 8164,
+          "mask_bytes": 1080,
+          "layer_total": 18432
+        },
+        "features.16.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 960,
+          "meta_bytes": 960,
+          "mask_bytes": 120,
+          "layer_total": 3064
+        },
+        "features.16.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 123951,
+          "meta_bytes": 123951,
+          "mask_bytes": 19200,
+          "layer_total": 268126
+        },
+        "features.16.conv.3.weight": {
+          "codebook_bytes": 640,
+          "indices_bytes": 160,
+          "meta_bytes": 160,
+          "mask_bytes": 20,
+          "layer_total": 980
+        },
+        "features.17.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 132163,
+          "meta_bytes": 132163,
+          "mask_bytes": 19200,
+          "layer_total": 284550
+        },
+        "features.17.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 950,
+          "meta_bytes": 950,
+          "mask_bytes": 120,
+          "layer_total": 3044
+        },
+        "features.17.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 8177,
+          "meta_bytes": 8177,
+          "mask_bytes": 1080,
+          "layer_total": 18458
+        },
+        "features.17.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 960,
+          "meta_bytes": 960,
+          "mask_bytes": 120,
+          "layer_total": 3064
+        },
+        "features.17.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 219942,
+          "meta_bytes": 219942,
+          "mask_bytes": 38400,
+          "layer_total": 479308
+        },
+        "features.17.conv.3.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 320,
+          "meta_bytes": 320,
+          "mask_bytes": 40,
+          "layer_total": 1704
+        },
+        "features.18.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 238602,
+          "meta_bytes": 238602,
+          "mask_bytes": 51200,
+          "layer_total": 529428
+        },
+        "features.18.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1280,
+          "meta_bytes": 1280,
+          "mask_bytes": 160,
+          "layer_total": 3744
+        },
+        "classifier.weight": {
+          "codebook_bytes": 128,
+          "indices_bytes": 7877,
+          "meta_bytes": 7877,
+          "mask_bytes": 1600,
+          "layer_total": 17482
+        }
+      },
+      "empirical_huffman_bits": 14896624,
+      "huffman_meta_path": "/content/drive/MyDrive/deepcompress_ckpt/sweep_out_v1/run_1759464623_huff_meta.npz",
+      "huffman_codes_path": "/content/drive/MyDrive/deepcompress_ckpt/sweep_out_v1/run_1759464623_huff_codes.json",
+      "elapsed_sec": 642.363091468811
+    },
+    {
+      "name": "run_1759465266",
+      "config": {
+        "baseline_ckpt": "/content/drive/MyDrive/checkpoints_v2/model_best.pth.tar",
+        "sparsity": 0.9,
+        "bits_conv": 8,
+        "bits_fc": 4,
+        "centroid_finetune_epochs": 15,
+        "centroid_lr": 0.01,
+        "prune_finetune_epochs": 5,
+        "prune_lr": 0.01,
+        "act_bits": 6
+      },
+      "acc_baseline": 95.91,
+      "acc_compressed": 95.55,
+      "original_bytes": 8946728,
+      "compressed_bytes_raw": 4350157,
+      "compressed_bytes_huffman_est": 2101437,
+      "final_MB_raw": 4.350157,
+      "final_MB_huffman": 2.101437,
+      "ratio_model_raw": 0.4862288201899063,
+      "ratio_model_huffman": 0.2348833003529335,
+      "ratio_weights_raw": 0.4862288201899063,
+      "ratio_activations": 0.1875323950097861,
+      "act_fp32_bytes_per_sample": 26331216.0,
+      "act_quant_bytes_per_sample": 4937956.0,
+      "per_layer_act_quant": {
+        "features.0.0": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 24580
+        },
+        "features.0.1": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 24580
+        },
+        "features.0.2": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 24580
+        },
+        "features.0": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 24580
+        },
+        "features.1.conv.0.0": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 24580
+        },
+        "features.1.conv.0.1": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 24580
+        },
+        "features.1.conv.0.2": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 24580
+        },
+        "features.1.conv.0": {
+          "fp32_bytes": 131072.0,
+          "quant_bytes": 24580
+        },
+        "features.1.conv.1": {
+          "fp32_bytes": 65536.0,
+          "quant_bytes": 12292
+        },
+        "features.1.conv.2": {
+          "fp32_bytes": 65536.0,
+          "quant_bytes": 12292
+        },
+        "features.1.conv": {
+          "fp32_bytes": 65536.0,
+          "quant_bytes": 12292
+        },
+        "features.1": {
+          "fp32_bytes": 65536.0,
+          "quant_bytes": 12292
+        },
+        "features.2.conv.0.0": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 73732
+        },
+        "features.2.conv.0.1": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 73732
+        },
+        "features.2.conv.0.2": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 73732
+        },
+        "features.2.conv.0": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 73732
+        },
+        "features.2.conv.1.0": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 73732
+        },
+        "features.2.conv.1.1": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 73732
+        },
+        "features.2.conv.1.2": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 73732
+        },
+        "features.2.conv.1": {
+          "fp32_bytes": 393216.0,
+          "quant_bytes": 73732
+        },
+        "features.2.conv.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.2.conv.3": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.2.conv": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.3.conv.0.0": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 110596
+        },
+        "features.3.conv.0.1": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 110596
+        },
+        "features.3.conv.0.2": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 110596
+        },
+        "features.3.conv.0": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 110596
+        },
+        "features.3.conv.1.0": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 110596
+        },
+        "features.3.conv.1.1": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 110596
+        },
+        "features.3.conv.1.2": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 110596
+        },
+        "features.3.conv.1": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 110596
+        },
+        "features.3.conv.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.3.conv.3": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.3.conv": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.3": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.4.conv.0.0": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 110596
+        },
+        "features.4.conv.0.1": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 110596
+        },
+        "features.4.conv.0.2": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 110596
+        },
+        "features.4.conv.0": {
+          "fp32_bytes": 589824.0,
+          "quant_bytes": 110596
+        },
+        "features.4.conv.1.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.4.conv.1.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.4.conv.1.2": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.4.conv.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.4.conv.2": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 6148
+        },
+        "features.4.conv.3": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 6148
+        },
+        "features.4.conv": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 6148
+        },
+        "features.4": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 6148
+        },
+        "features.5.conv.0.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 36868
+        },
+        "features.5.conv.0.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 36868
+        },
+        "features.5.conv.0.2": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 36868
+        },
+        "features.5.conv.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 36868
+        },
+        "features.5.conv.1.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 36868
+        },
+        "features.5.conv.1.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 36868
+        },
+        "features.5.conv.1.2": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 36868
+        },
+        "features.5.conv.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 36868
+        },
+        "features.5.conv.2": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 6148
+        },
+        "features.5.conv.3": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 6148
+        },
+        "features.5.conv": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 6148
+        },
+        "features.5": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 6148
+        },
+        "features.6.conv.0.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 36868
+        },
+        "features.6.conv.0.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 36868
+        },
+        "features.6.conv.0.2": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 36868
+        },
+        "features.6.conv.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 36868
+        },
+        "features.6.conv.1.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 36868
+        },
+        "features.6.conv.1.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 36868
+        },
+        "features.6.conv.1.2": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 36868
+        },
+        "features.6.conv.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 36868
+        },
+        "features.6.conv.2": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 6148
+        },
+        "features.6.conv.3": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 6148
+        },
+        "features.6.conv": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 6148
+        },
+        "features.6": {
+          "fp32_bytes": 32768.0,
+          "quant_bytes": 6148
+        },
+        "features.7.conv.0.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 36868
+        },
+        "features.7.conv.0.1": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 36868
+        },
+        "features.7.conv.0.2": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 36868
+        },
+        "features.7.conv.0": {
+          "fp32_bytes": 196608.0,
+          "quant_bytes": 36868
+        },
+        "features.7.conv.1.0": {
+          "fp32_bytes": 49152.0,
+          "quant_bytes": 9220
+        },
+        "features.7.conv.1.1": {
+          "fp32_bytes": 49152.0,
+          "quant_bytes": 9220
+        },
+        "features.7.conv.1.2": {
+          "fp32_bytes": 49152.0,
+          "quant_bytes": 9220
+        },
+        "features.7.conv.1": {
+          "fp32_bytes": 49152.0,
+          "quant_bytes": 9220
+        },
+        "features.7.conv.2": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 3076
+        },
+        "features.7.conv.3": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 3076
+        },
+        "features.7.conv": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 3076
+        },
+        "features.7": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 3076
+        },
+        "features.8.conv.0.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.8.conv.0.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.8.conv.0.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.8.conv.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.8.conv.1.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.8.conv.1.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.8.conv.1.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.8.conv.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.8.conv.2": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 3076
+        },
+        "features.8.conv.3": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 3076
+        },
+        "features.8.conv": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 3076
+        },
+        "features.8": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 3076
+        },
+        "features.9.conv.0.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.9.conv.0.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.9.conv.0.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.9.conv.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.9.conv.1.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.9.conv.1.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.9.conv.1.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.9.conv.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.9.conv.2": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 3076
+        },
+        "features.9.conv.3": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 3076
+        },
+        "features.9.conv": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 3076
+        },
+        "features.9": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 3076
+        },
+        "features.10.conv.0.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.10.conv.0.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.10.conv.0.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.10.conv.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.10.conv.1.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.10.conv.1.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.10.conv.1.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.10.conv.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.10.conv.2": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 3076
+        },
+        "features.10.conv.3": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 3076
+        },
+        "features.10.conv": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 3076
+        },
+        "features.10": {
+          "fp32_bytes": 16384.0,
+          "quant_bytes": 3076
+        },
+        "features.11.conv.0.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.11.conv.0.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.11.conv.0.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.11.conv.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.11.conv.1.0": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.11.conv.1.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.11.conv.1.2": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.11.conv.1": {
+          "fp32_bytes": 98304.0,
+          "quant_bytes": 18436
+        },
+        "features.11.conv.2": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 4612
+        },
+        "features.11.conv.3": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 4612
+        },
+        "features.11.conv": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 4612
+        },
+        "features.11": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 4612
+        },
+        "features.12.conv.0.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.12.conv.0.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.12.conv.0.2": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.12.conv.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.12.conv.1.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.12.conv.1.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.12.conv.1.2": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.12.conv.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.12.conv.2": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 4612
+        },
+        "features.12.conv.3": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 4612
+        },
+        "features.12.conv": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 4612
+        },
+        "features.12": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 4612
+        },
+        "features.13.conv.0.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.13.conv.0.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.13.conv.0.2": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.13.conv.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.13.conv.1.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.13.conv.1.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.13.conv.1.2": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.13.conv.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.13.conv.2": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 4612
+        },
+        "features.13.conv.3": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 4612
+        },
+        "features.13.conv": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 4612
+        },
+        "features.13": {
+          "fp32_bytes": 24576.0,
+          "quant_bytes": 4612
+        },
+        "features.14.conv.0.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.14.conv.0.1": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.14.conv.0.2": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.14.conv.0": {
+          "fp32_bytes": 147456.0,
+          "quant_bytes": 27652
+        },
+        "features.14.conv.1.0": {
+          "fp32_bytes": 36864.0,
+          "quant_bytes": 6916
+        },
+        "features.14.conv.1.1": {
+          "fp32_bytes": 36864.0,
+          "quant_bytes": 6916
+        },
+        "features.14.conv.1.2": {
+          "fp32_bytes": 36864.0,
+          "quant_bytes": 6916
+        },
+        "features.14.conv.1": {
+          "fp32_bytes": 36864.0,
+          "quant_bytes": 6916
+        },
+        "features.14.conv.2": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 1924
+        },
+        "features.14.conv.3": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 1924
+        },
+        "features.14.conv": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 1924
+        },
+        "features.14": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 1924
+        },
+        "features.15.conv.0.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.15.conv.0.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.15.conv.0.2": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.15.conv.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.15.conv.1.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.15.conv.1.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.15.conv.1.2": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.15.conv.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.15.conv.2": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 1924
+        },
+        "features.15.conv.3": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 1924
+        },
+        "features.15.conv": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 1924
+        },
+        "features.15": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 1924
+        },
+        "features.16.conv.0.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.16.conv.0.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.16.conv.0.2": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.16.conv.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.16.conv.1.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.16.conv.1.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.16.conv.1.2": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.16.conv.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.16.conv.2": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 1924
+        },
+        "features.16.conv.3": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 1924
+        },
+        "features.16.conv": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 1924
+        },
+        "features.16": {
+          "fp32_bytes": 10240.0,
+          "quant_bytes": 1924
+        },
+        "features.17.conv.0.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.17.conv.0.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.17.conv.0.2": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.17.conv.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.17.conv.1.0": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.17.conv.1.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.17.conv.1.2": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.17.conv.1": {
+          "fp32_bytes": 61440.0,
+          "quant_bytes": 11524
+        },
+        "features.17.conv.2": {
+          "fp32_bytes": 20480.0,
+          "quant_bytes": 3844
+        },
+        "features.17.conv.3": {
+          "fp32_bytes": 20480.0,
+          "quant_bytes": 3844
+        },
+        "features.17.conv": {
+          "fp32_bytes": 20480.0,
+          "quant_bytes": 3844
+        },
+        "features.17": {
+          "fp32_bytes": 20480.0,
+          "quant_bytes": 3844
+        },
+        "features.18.0": {
+          "fp32_bytes": 81920.0,
+          "quant_bytes": 15364
+        },
+        "features.18.1": {
+          "fp32_bytes": 81920.0,
+          "quant_bytes": 15364
+        },
+        "features.18.2": {
+          "fp32_bytes": 81920.0,
+          "quant_bytes": 15364
+        },
+        "features.18": {
+          "fp32_bytes": 81920.0,
+          "quant_bytes": 15364
+        },
+        "features": {
+          "fp32_bytes": 81920.0,
+          "quant_bytes": 15364
+        },
+        "avgpool": {
+          "fp32_bytes": 5120.0,
+          "quant_bytes": 964
+        },
+        "dropout": {
+          "fp32_bytes": 5120.0,
+          "quant_bytes": 964
+        },
+        "classifier": {
+          "fp32_bytes": 40.0,
+          "quant_bytes": 12
+        },
+        "": {
+          "fp32_bytes": 40.0,
+          "quant_bytes": 12
+        }
+      },
+      "size_breakdown": {
+        "features.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 827,
+          "meta_bytes": 827,
+          "mask_bytes": 108,
+          "layer_total": 2786
+        },
+        "features.0.1.weight": {
+          "codebook_bytes": 128,
+          "indices_bytes": 32,
+          "meta_bytes": 32,
+          "mask_bytes": 4,
+          "layer_total": 196
+        },
+        "features.1.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 285,
+          "meta_bytes": 285,
+          "mask_bytes": 36,
+          "layer_total": 1630
+        },
+        "features.1.conv.0.1.weight": {
+          "codebook_bytes": 128,
+          "indices_bytes": 32,
+          "meta_bytes": 32,
+          "mask_bytes": 4,
+          "layer_total": 196
+        },
+        "features.1.conv.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 494,
+          "meta_bytes": 494,
+          "mask_bytes": 64,
+          "layer_total": 2076
+        },
+        "features.1.conv.2.weight": {
+          "codebook_bytes": 64,
+          "indices_bytes": 16,
+          "meta_bytes": 16,
+          "mask_bytes": 2,
+          "layer_total": 98
+        },
+        "features.2.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1514,
+          "meta_bytes": 1514,
+          "mask_bytes": 192,
+          "layer_total": 4244
+        },
+        "features.2.conv.0.1.weight": {
+          "codebook_bytes": 384,
+          "indices_bytes": 96,
+          "meta_bytes": 96,
+          "mask_bytes": 12,
+          "layer_total": 588
+        },
+        "features.2.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 854,
+          "meta_bytes": 854,
+          "mask_bytes": 108,
+          "layer_total": 2840
+        },
+        "features.2.conv.1.1.weight": {
+          "codebook_bytes": 384,
+          "indices_bytes": 96,
+          "meta_bytes": 96,
+          "mask_bytes": 12,
+          "layer_total": 588
+        },
+        "features.2.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 2273,
+          "meta_bytes": 2273,
+          "mask_bytes": 288,
+          "layer_total": 5858
+        },
+        "features.2.conv.3.weight": {
+          "codebook_bytes": 96,
+          "indices_bytes": 24,
+          "meta_bytes": 24,
+          "mask_bytes": 3,
+          "layer_total": 147
+        },
+        "features.3.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3397,
+          "meta_bytes": 3397,
+          "mask_bytes": 432,
+          "layer_total": 8250
+        },
+        "features.3.conv.0.1.weight": {
+          "codebook_bytes": 576,
+          "indices_bytes": 144,
+          "meta_bytes": 144,
+          "mask_bytes": 18,
+          "layer_total": 882
+        },
+        "features.3.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1279,
+          "meta_bytes": 1279,
+          "mask_bytes": 162,
+          "layer_total": 3744
+        },
+        "features.3.conv.1.1.weight": {
+          "codebook_bytes": 576,
+          "indices_bytes": 144,
+          "meta_bytes": 144,
+          "mask_bytes": 18,
+          "layer_total": 882
+        },
+        "features.3.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3389,
+          "meta_bytes": 3389,
+          "mask_bytes": 432,
+          "layer_total": 8234
+        },
+        "features.3.conv.3.weight": {
+          "codebook_bytes": 96,
+          "indices_bytes": 24,
+          "meta_bytes": 24,
+          "mask_bytes": 3,
+          "layer_total": 147
+        },
+        "features.4.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3416,
+          "meta_bytes": 3416,
+          "mask_bytes": 432,
+          "layer_total": 8288
+        },
+        "features.4.conv.0.1.weight": {
+          "codebook_bytes": 576,
+          "indices_bytes": 144,
+          "meta_bytes": 144,
+          "mask_bytes": 18,
+          "layer_total": 882
+        },
+        "features.4.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1290,
+          "meta_bytes": 1290,
+          "mask_bytes": 162,
+          "layer_total": 3766
+        },
+        "features.4.conv.1.1.weight": {
+          "codebook_bytes": 576,
+          "indices_bytes": 144,
+          "meta_bytes": 144,
+          "mask_bytes": 18,
+          "layer_total": 882
+        },
+        "features.4.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 4535,
+          "meta_bytes": 4535,
+          "mask_bytes": 576,
+          "layer_total": 10670
+        },
+        "features.4.conv.3.weight": {
+          "codebook_bytes": 128,
+          "indices_bytes": 32,
+          "meta_bytes": 32,
+          "mask_bytes": 4,
+          "layer_total": 196
+        },
+        "features.5.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 5999,
+          "meta_bytes": 5999,
+          "mask_bytes": 768,
+          "layer_total": 13790
+        },
+        "features.5.conv.0.1.weight": {
+          "codebook_bytes": 768,
+          "indices_bytes": 192,
+          "meta_bytes": 192,
+          "mask_bytes": 24,
+          "layer_total": 1176
+        },
+        "features.5.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1708,
+          "meta_bytes": 1708,
+          "mask_bytes": 216,
+          "layer_total": 4656
+        },
+        "features.5.conv.1.1.weight": {
+          "codebook_bytes": 768,
+          "indices_bytes": 192,
+          "meta_bytes": 192,
+          "mask_bytes": 24,
+          "layer_total": 1176
+        },
+        "features.5.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 5974,
+          "meta_bytes": 5974,
+          "mask_bytes": 768,
+          "layer_total": 13740
+        },
+        "features.5.conv.3.weight": {
+          "codebook_bytes": 128,
+          "indices_bytes": 32,
+          "meta_bytes": 32,
+          "mask_bytes": 4,
+          "layer_total": 196
+        },
+        "features.6.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 6004,
+          "meta_bytes": 6004,
+          "mask_bytes": 768,
+          "layer_total": 13800
+        },
+        "features.6.conv.0.1.weight": {
+          "codebook_bytes": 760,
+          "indices_bytes": 190,
+          "meta_bytes": 190,
+          "mask_bytes": 24,
+          "layer_total": 1164
+        },
+        "features.6.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1697,
+          "meta_bytes": 1697,
+          "mask_bytes": 216,
+          "layer_total": 4634
+        },
+        "features.6.conv.1.1.weight": {
+          "codebook_bytes": 768,
+          "indices_bytes": 192,
+          "meta_bytes": 192,
+          "mask_bytes": 24,
+          "layer_total": 1176
+        },
+        "features.6.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 5988,
+          "meta_bytes": 5988,
+          "mask_bytes": 768,
+          "layer_total": 13768
+        },
+        "features.6.conv.3.weight": {
+          "codebook_bytes": 128,
+          "indices_bytes": 32,
+          "meta_bytes": 32,
+          "mask_bytes": 4,
+          "layer_total": 196
+        },
+        "features.7.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 6034,
+          "meta_bytes": 6034,
+          "mask_bytes": 768,
+          "layer_total": 13860
+        },
+        "features.7.conv.0.1.weight": {
+          "codebook_bytes": 764,
+          "indices_bytes": 191,
+          "meta_bytes": 191,
+          "mask_bytes": 24,
+          "layer_total": 1170
+        },
+        "features.7.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1720,
+          "meta_bytes": 1720,
+          "mask_bytes": 216,
+          "layer_total": 4680
+        },
+        "features.7.conv.1.1.weight": {
+          "codebook_bytes": 768,
+          "indices_bytes": 192,
+          "meta_bytes": 192,
+          "mask_bytes": 24,
+          "layer_total": 1176
+        },
+        "features.7.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 12003,
+          "meta_bytes": 12003,
+          "mask_bytes": 1536,
+          "layer_total": 26566
+        },
+        "features.7.conv.3.weight": {
+          "codebook_bytes": 256,
+          "indices_bytes": 64,
+          "meta_bytes": 64,
+          "mask_bytes": 8,
+          "layer_total": 392
+        },
+        "features.8.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 23645,
+          "meta_bytes": 23645,
+          "mask_bytes": 3072,
+          "layer_total": 51386
+        },
+        "features.8.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 383,
+          "meta_bytes": 383,
+          "mask_bytes": 48,
+          "layer_total": 1838
+        },
+        "features.8.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3391,
+          "meta_bytes": 3391,
+          "mask_bytes": 432,
+          "layer_total": 8238
+        },
+        "features.8.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 384,
+          "meta_bytes": 384,
+          "mask_bytes": 48,
+          "layer_total": 1840
+        },
+        "features.8.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 23663,
+          "meta_bytes": 23663,
+          "mask_bytes": 3072,
+          "layer_total": 51422
+        },
+        "features.8.conv.3.weight": {
+          "codebook_bytes": 256,
+          "indices_bytes": 64,
+          "meta_bytes": 64,
+          "mask_bytes": 8,
+          "layer_total": 392
+        },
+        "features.9.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 23599,
+          "meta_bytes": 23599,
+          "mask_bytes": 3072,
+          "layer_total": 51294
+        },
+        "features.9.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 381,
+          "meta_bytes": 381,
+          "mask_bytes": 48,
+          "layer_total": 1834
+        },
+        "features.9.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3378,
+          "meta_bytes": 3378,
+          "mask_bytes": 432,
+          "layer_total": 8212
+        },
+        "features.9.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 384,
+          "meta_bytes": 384,
+          "mask_bytes": 48,
+          "layer_total": 1840
+        },
+        "features.9.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 23545,
+          "meta_bytes": 23545,
+          "mask_bytes": 3072,
+          "layer_total": 51186
+        },
+        "features.9.conv.3.weight": {
+          "codebook_bytes": 256,
+          "indices_bytes": 64,
+          "meta_bytes": 64,
+          "mask_bytes": 8,
+          "layer_total": 392
+        },
+        "features.10.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 23628,
+          "meta_bytes": 23628,
+          "mask_bytes": 3072,
+          "layer_total": 51352
+        },
+        "features.10.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 382,
+          "meta_bytes": 382,
+          "mask_bytes": 48,
+          "layer_total": 1836
+        },
+        "features.10.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3375,
+          "meta_bytes": 3375,
+          "mask_bytes": 432,
+          "layer_total": 8206
+        },
+        "features.10.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 384,
+          "meta_bytes": 384,
+          "mask_bytes": 48,
+          "layer_total": 1840
+        },
+        "features.10.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 23447,
+          "meta_bytes": 23447,
+          "mask_bytes": 3072,
+          "layer_total": 50990
+        },
+        "features.10.conv.3.weight": {
+          "codebook_bytes": 256,
+          "indices_bytes": 64,
+          "meta_bytes": 64,
+          "mask_bytes": 8,
+          "layer_total": 392
+        },
+        "features.11.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 24004,
+          "meta_bytes": 24004,
+          "mask_bytes": 3072,
+          "layer_total": 52104
+        },
+        "features.11.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 383,
+          "meta_bytes": 383,
+          "mask_bytes": 48,
+          "layer_total": 1838
+        },
+        "features.11.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 3396,
+          "meta_bytes": 3396,
+          "mask_bytes": 432,
+          "layer_total": 8248
+        },
+        "features.11.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 384,
+          "meta_bytes": 384,
+          "mask_bytes": 48,
+          "layer_total": 1840
+        },
+        "features.11.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 35770,
+          "meta_bytes": 35770,
+          "mask_bytes": 4608,
+          "layer_total": 77172
+        },
+        "features.11.conv.3.weight": {
+          "codebook_bytes": 384,
+          "indices_bytes": 96,
+          "meta_bytes": 96,
+          "mask_bytes": 12,
+          "layer_total": 588
+        },
+        "features.12.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 52590,
+          "meta_bytes": 52590,
+          "mask_bytes": 6912,
+          "layer_total": 113116
+        },
+        "features.12.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 570,
+          "meta_bytes": 570,
+          "mask_bytes": 72,
+          "layer_total": 2236
+        },
+        "features.12.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 5078,
+          "meta_bytes": 5078,
+          "mask_bytes": 648,
+          "layer_total": 11828
+        },
+        "features.12.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 576,
+          "meta_bytes": 576,
+          "mask_bytes": 72,
+          "layer_total": 2248
+        },
+        "features.12.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 52195,
+          "meta_bytes": 52195,
+          "mask_bytes": 6912,
+          "layer_total": 112326
+        },
+        "features.12.conv.3.weight": {
+          "codebook_bytes": 384,
+          "indices_bytes": 96,
+          "meta_bytes": 96,
+          "mask_bytes": 12,
+          "layer_total": 588
+        },
+        "features.13.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 52475,
+          "meta_bytes": 52475,
+          "mask_bytes": 6912,
+          "layer_total": 112886
+        },
+        "features.13.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 574,
+          "meta_bytes": 574,
+          "mask_bytes": 72,
+          "layer_total": 2244
+        },
+        "features.13.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 5070,
+          "meta_bytes": 5070,
+          "mask_bytes": 648,
+          "layer_total": 11812
+        },
+        "features.13.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 576,
+          "meta_bytes": 576,
+          "mask_bytes": 72,
+          "layer_total": 2248
+        },
+        "features.13.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 51821,
+          "meta_bytes": 51821,
+          "mask_bytes": 6912,
+          "layer_total": 111578
+        },
+        "features.13.conv.3.weight": {
+          "codebook_bytes": 384,
+          "indices_bytes": 96,
+          "meta_bytes": 96,
+          "mask_bytes": 12,
+          "layer_total": 588
+        },
+        "features.14.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 53057,
+          "meta_bytes": 53057,
+          "mask_bytes": 6912,
+          "layer_total": 114050
+        },
+        "features.14.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 564,
+          "meta_bytes": 564,
+          "mask_bytes": 72,
+          "layer_total": 2224
+        },
+        "features.14.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 5116,
+          "meta_bytes": 5116,
+          "mask_bytes": 648,
+          "layer_total": 11904
+        },
+        "features.14.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 576,
+          "meta_bytes": 576,
+          "mask_bytes": 72,
+          "layer_total": 2248
+        },
+        "features.14.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 86896,
+          "meta_bytes": 86896,
+          "mask_bytes": 11520,
+          "layer_total": 186336
+        },
+        "features.14.conv.3.weight": {
+          "codebook_bytes": 640,
+          "indices_bytes": 160,
+          "meta_bytes": 160,
+          "mask_bytes": 20,
+          "layer_total": 980
+        },
+        "features.15.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 141979,
+          "meta_bytes": 141979,
+          "mask_bytes": 19200,
+          "layer_total": 304182
+        },
+        "features.15.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 960,
+          "meta_bytes": 960,
+          "mask_bytes": 120,
+          "layer_total": 3064
+        },
+        "features.15.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 8462,
+          "meta_bytes": 8462,
+          "mask_bytes": 1080,
+          "layer_total": 19028
+        },
+        "features.15.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 960,
+          "meta_bytes": 960,
+          "mask_bytes": 120,
+          "layer_total": 3064
+        },
+        "features.15.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 140595,
+          "meta_bytes": 140595,
+          "mask_bytes": 19200,
+          "layer_total": 301414
+        },
+        "features.15.conv.3.weight": {
+          "codebook_bytes": 640,
+          "indices_bytes": 160,
+          "meta_bytes": 160,
+          "mask_bytes": 20,
+          "layer_total": 980
+        },
+        "features.16.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 141895,
+          "meta_bytes": 141895,
+          "mask_bytes": 19200,
+          "layer_total": 304014
+        },
+        "features.16.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 957,
+          "meta_bytes": 957,
+          "mask_bytes": 120,
+          "layer_total": 3058
+        },
+        "features.16.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 8401,
+          "meta_bytes": 8401,
+          "mask_bytes": 1080,
+          "layer_total": 18906
+        },
+        "features.16.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 960,
+          "meta_bytes": 960,
+          "mask_bytes": 120,
+          "layer_total": 3064
+        },
+        "features.16.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 138976,
+          "meta_bytes": 138976,
+          "mask_bytes": 19200,
+          "layer_total": 298176
+        },
+        "features.16.conv.3.weight": {
+          "codebook_bytes": 640,
+          "indices_bytes": 160,
+          "meta_bytes": 160,
+          "mask_bytes": 20,
+          "layer_total": 980
+        },
+        "features.17.conv.0.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 143032,
+          "meta_bytes": 143032,
+          "mask_bytes": 19200,
+          "layer_total": 306288
+        },
+        "features.17.conv.0.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 956,
+          "meta_bytes": 956,
+          "mask_bytes": 120,
+          "layer_total": 3056
+        },
+        "features.17.conv.1.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 8407,
+          "meta_bytes": 8407,
+          "mask_bytes": 1080,
+          "layer_total": 18918
+        },
+        "features.17.conv.1.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 960,
+          "meta_bytes": 960,
+          "mask_bytes": 120,
+          "layer_total": 3064
+        },
+        "features.17.conv.2.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 263771,
+          "meta_bytes": 263771,
+          "mask_bytes": 38400,
+          "layer_total": 566966
+        },
+        "features.17.conv.3.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 320,
+          "meta_bytes": 320,
+          "mask_bytes": 40,
+          "layer_total": 1704
+        },
+        "features.18.0.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 322605,
+          "meta_bytes": 322605,
+          "mask_bytes": 51200,
+          "layer_total": 697434
+        },
+        "features.18.1.weight": {
+          "codebook_bytes": 1024,
+          "indices_bytes": 1280,
+          "meta_bytes": 1280,
+          "mask_bytes": 160,
+          "layer_total": 3744
+        },
+        "classifier.weight": {
+          "codebook_bytes": 64,
+          "indices_bytes": 6348,
+          "meta_bytes": 7935,
+          "mask_bytes": 1600,
+          "layer_total": 15947
+        }
+      },
+      "empirical_huffman_bits": 16103496,
+      "huffman_meta_path": "/content/drive/MyDrive/deepcompress_ckpt/sweep_out_v1/run_1759465266_huff_meta.npz",
+      "huffman_codes_path": "/content/drive/MyDrive/deepcompress_ckpt/sweep_out_v1/run_1759465266_huff_codes.json",
+      "elapsed_sec": 744.3918187618256
+    }
+  ],
+  "best_model_under_tol": null,
+  "best_weights_under_tol": null,
+  "best_activations_under_tol": null
+}
